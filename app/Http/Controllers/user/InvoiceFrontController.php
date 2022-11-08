@@ -18,7 +18,7 @@ class InvoiceFrontController extends Controller
      */
     public function index()
     {
-       
+
     }
 
     /**
@@ -27,7 +27,7 @@ class InvoiceFrontController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(Request $request)
-    {  
+    {
         $flag=null!=$request->input('flag')?$request->input('flag'):null;
         $products=Product::get();
         return view('user.invoice',compact('products','flag'));
@@ -41,8 +41,8 @@ class InvoiceFrontController extends Controller
      */
     public function store(Request $request)
     {
-        
-                $request->validate([        
+
+                $request->validate([
                 'name' =>"required",
                 'email' =>"required|email",
                 'phone' =>"required|numeric",
@@ -55,8 +55,8 @@ class InvoiceFrontController extends Controller
                 'product_id.required' => trans("custom_validation.product_req"),
                 'price.required' => trans("custom_validation.msg_req"),
         ]);
-        
-        $data=$request->all();     
+
+        $data=$request->all();
         $last_invoice = Invoice::create($data);
         $username='merchant.TESTEGPTEST';
         $password='c622b7e9e550292df400be7d3e846476';
@@ -64,7 +64,7 @@ class InvoiceFrontController extends Controller
         $data = array(
             "session" => array ( "authenticationLimit"=> 25)
             );
-       
+
         //create session
         $postdata = json_encode($data);
         $ch = curl_init($url);
@@ -77,8 +77,8 @@ class InvoiceFrontController extends Controller
         curl_close($ch);
         $seeion_id = json_decode($result1)->session->id ;
         // dd($seeion_id);
-           
-        
+
+
         //update session
         $newUrl = 'https://test-nbe.gateway.mastercard.com/api/rest/version/63/merchant/TESTEGPTEST/session/'.$seeion_id;
 
@@ -90,7 +90,7 @@ class InvoiceFrontController extends Controller
                 "amount" => $last_invoice->price
             ),
         );
-        
+
         $postdata_two = json_encode($data_two);
         $ch2 = curl_init($newUrl);
         // curl_setopt($ch2, CURLOPT_POST, 1);
@@ -107,17 +107,17 @@ class InvoiceFrontController extends Controller
         return view('user.marwan_payment',compact('seeion_id', 'last_invoice'));
 
     }
-    
-    
+
+
     public function step2 ($locale, $id, $seeion_id)
     {
-        
+
         $invoice = Invoice::find($id);
         //Auth session
         $username='merchant.TESTEGPTEST';
         $password='c622b7e9e550292df400be7d3e846476';
         $authUrl = 'https://test-nbe.gateway.mastercard.com/api/rest/version/63/merchant/TESTEGPTEST/order/11'.$invoice->id.'/transaction/1';
-        
+
         $data_three = array(
             "apiOperation" => "INITIATE_AUTHENTICATION",
             "authentication" => array(
@@ -129,11 +129,11 @@ class InvoiceFrontController extends Controller
                 "currency"=> "EGP"
                         ),
             "session" => array (
-                "id" => $seeion_id  
+                "id" => $seeion_id
             ),
         );
 
-        
+
         $postdata_three = json_encode($data_three);
         $ch3 = curl_init($authUrl);
         // curl_setopt($ch3, CURLOPT_POST, 1);
@@ -171,8 +171,8 @@ class InvoiceFrontController extends Controller
                         "ipAddress"=> "192.0.1.1"
                         ),
                     );
-                
-                
+                sleep(10);
+
                 $postdata_four = json_encode($data_four);
                 // dd($postdata_four);
                 $ch4 = curl_init($authUrl);
@@ -183,19 +183,19 @@ class InvoiceFrontController extends Controller
                 curl_setopt($ch4, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
                 curl_setopt($ch4, CURLOPT_USERPWD, "$username:$password");
                 $result4 = curl_exec($ch4);
-        
                 curl_close($ch4);
-                // dd($result4);
                 $result4decode = json_decode( $result4, true );
-                if (isset($result4decode['authentication']) ){
-                    $transaction_id = $result4decode['authentication']['3ds']['transactionId'];
+
+                if (isset($result4decode['authentication'])){
+                     $transaction_id = $result4decode['authentication']['3ds']['transactionId'];
                 } else {
-                    dd($result4);
+//                    dd($result4);
+                    return redirect()->route('cancel_invoice', ['ar', $invoice->id ]);
                 }
-                
-                
+
+
                 // dd($transaction_id);
-                
+
                 // //Pay
                 $payUrl = 'https://test-nbe.gateway.mastercard.com/api/rest/version/63/merchant/TESTEGPTEST/order/'.$invoice->id.'/transaction/1';
 
@@ -216,14 +216,14 @@ class InvoiceFrontController extends Controller
                             "acsEci" => "02",
                             "authenticationToken" => "jHyn+7YFi1EUAREAAAAvNUe6Hv8=",
                             "transactionId" => $transaction_id
-                            ), 
+                            ),
                             "3ds2"=>array(
                                 "transactionStatus"=>"Y"
                                 )
-                                ),  
+                                ),
                 );
-        
-                
+
+
                 $data_five = json_encode($data_five);
                 $ch5 = curl_init($payUrl);
                 // curl_setopt($ch5, CURLOPT_POST, 1);
@@ -233,7 +233,7 @@ class InvoiceFrontController extends Controller
                 curl_setopt($ch5, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
                 curl_setopt($ch5, CURLOPT_USERPWD, "$username:$password");
                 $result5 = curl_exec($ch5);
-        
+
                 curl_close($ch5);
                 // dd($result5 );
                 $result5;
@@ -241,7 +241,7 @@ class InvoiceFrontController extends Controller
                  if( isset($result5decode['result']) && $result5decode['result'] == "SUCCESS" ) {
                      return redirect()->route('success_invoice', ['ar', $invoice->id ]);
                  }else {
-                     dd('pay error',$result5);
+//                     dd('pay error',$result5);
                      return redirect()->route('cancel_invoice', ['ar', $invoice->id ]);
                  }
     }
@@ -303,6 +303,6 @@ class InvoiceFrontController extends Controller
         return view('user.success_payment');
     }
 
-    
+
 
 }
