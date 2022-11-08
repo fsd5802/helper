@@ -146,6 +146,7 @@ class InvoiceFrontController extends Controller
 
         curl_close($ch3);
         $result3;
+        sleep(10);
         // dd($result3);
         $data_four = array(
                     "apiOperation"=> "AUTHENTICATE_PAYER",
@@ -171,7 +172,7 @@ class InvoiceFrontController extends Controller
                         "ipAddress"=> "192.0.1.1"
                         ),
                     );
-                sleep(10);
+
 
                 $postdata_four = json_encode($data_four);
                 // dd($postdata_four);
