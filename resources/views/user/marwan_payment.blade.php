@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="alert alert-danger alert-dismissible fade mt-5" role="alert" id="divError">
+                    <div class="alert alert-danger alert-dismissible fade mt-5 d-none" role="alert" id="divError">
                         <h1>Validation Errors</h1>
                        <ul class="errors"></ul>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -201,6 +201,7 @@
                             }
                             $('#payButton').prop('disabled', false);
                             $('#divError').addClass('show');
+                            $('#divError').removeClass('d-none');
                             $('.errors').html('');
                             errorMsg.forEach(function (msg){
                                 $('.errors').append(`<li>${msg}</li>`);
@@ -228,6 +229,7 @@
             PaymentSession.updateSessionFromForm('card');
             $('#payButton').attr('disabled', true);
             $('#divError').removeClass('show');
+            $('#divError').addClass('d-none');
         }
     </script>
 @endpush
