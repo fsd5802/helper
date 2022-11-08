@@ -1,0 +1,137 @@
+// global variables 
+$main_color: #2681DB;
+$second_color: #FFB251;
+// global styles
+
+// mixins
+@mixin borderRadius($border) {
+    border-radius: $border;
+    -webkit-border-radius: $border;
+    -moz-border-radius: $border;
+    -ms-border-radius: $border;
+    -o-border-radius: $border;
+}
+
+@mixin transition($trans) {
+    transition: $trans;
+    -webkit-transition: $trans;
+    -moz-transition: $trans;
+    -ms-transition: $trans;
+    -o-transition: $trans;
+}
+
+@mixin transform($transform) {
+    transform: $transform;
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+}
+@mixin transform($transform) {
+    transform: $transform;
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+}
+@mixin animation($anim) {
+    animation: $anim;
+    -webkit-animation: $anim;
+}
+@mixin boxshadow($shadow) {
+    box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+}
+
+//placeholder selectors
+%fitimage {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+%overtext {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+// a,
+// button {
+//     text-decoration: none;
+//     &.btn {
+//         &:focus {
+//             outline: none;
+//             box-shadow: none;
+//         }
+//     }
+// }
+
+// button {
+//     &:focus {
+//         outline: none;
+//         box-shadow: none;
+//     }
+// }
+
+.btn {
+    overflow: hidden;
+}
+
+// global tilte
+// .title {
+//     margin-bottom: 10px;
+//     line-height: normal;
+//     h2 {
+//         font-size: 24px;
+//         color: #000;
+//         text-transform: capitalize;
+//     }
+//     p {
+//         color: #C7C7C7;
+//     }
+// }
+
+// scroll bar settings
+::-webkit-scrollbar-track {
+    background-color: #ddd;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+    background-color: $main_color;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $main_color;
+    border-top: 0;
+    border-bottom: 0;
+
+    &:hover {
+        background-color: rgba(64, 78, 233, .8);
+    }
+}
+
+// scroll bar settings
+
+//selection
+::selection {
+    background-color: $main_color;
+    color: #fff;
+}
+
+.hvr-sweep-to-top {
+    &::before {
+        background-color: $second_color;
+    }
+}
+
+.hvr-sweep-to-right {
+    &::before {
+        background-color: $second_color;
+    }
+}

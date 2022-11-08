@@ -1,0 +1,705 @@
+@import "includes/global";
+
+body {
+    #___partnersbadge_0 {
+        // position: fixed;
+        // top: 50%;
+        // right: -195px;
+        // z-index: 999;
+        // @include transition(all ease 0.5s);
+        margin-top:0.6rem;
+
+        // &:hover {
+        //     right: 0;
+        // }
+    }
+}
+
+.saas_two_section_title,
+.str-section-title {
+    h2 {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+}
+
+//header
+.str-main-header {
+    .str-brand-logo {
+        img {
+            max-width: 70px;
+        }
+    }
+
+    .str-main-menu-item {
+        .str-main-navigation {
+            background-color: #fff;
+        }
+
+        .str-main-navigation {
+            li {
+                a {
+                    color: #000;
+                    padding: 14px 25px;
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.saas_two_main_header {
+    .s2-main-navigation {
+        padding-top: 0;
+
+        .navbar-nav {
+            li {
+                margin-right: 20px;
+                font-size: 14px;
+
+                a {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .main_menu_list {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+.saas_two_main_header {
+    .saas_sign_up_btn {
+        background-color: $main_color;
+    }
+
+    .brand_logo {
+        padding-top: 0;
+
+        img {
+            max-width: 120px;
+        }
+    }
+
+    .s2-main-navigation {
+        padding-top: 0;
+
+        .navbar-nav {
+            li {
+                a {
+                    &::before {
+                        background-color: $second_color;
+                        left: 0;
+                        bottom: -7px;
+                    }
+
+                    &:hover {
+                        color: $main_color;
+
+                        &::before,
+                        &::before {
+                            background-color: $main_color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .dropdown.user {
+            a {
+                &::before {
+                    display: none;
+                }
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .s2-mobile_menu_button {
+        color: $main_color;
+    }
+
+    .dropdown {
+        .dropdown-menu {
+            li {
+                a {
+                    padding: 0;
+                    display: block;
+
+                    &:after {
+                        background-color: $main_color;
+                        top: 7px;
+                    }
+                }
+            }
+        }
+    }
+
+    .saas_sign_up_btn {
+        height: 45px;
+        width: 125px;
+        line-height: 45px;
+    }
+}
+
+//hedaer
+
+//slider
+.str-banner-slide-area {
+    .str-banner-content {
+        h1 {
+            font-size: 50px;
+        }
+    }
+}
+
+.saas_two_banner_section {
+    .s2-banner_content {
+        max-width: 600px;
+
+        h1 {
+            font-size: 36px;
+        }
+    }
+
+    .banner_mockup {
+        img {
+            width: 600px;
+        }
+    }
+}
+
+.saas_two_section_title .title_tag,
+.saas_two_banner_section .s2-banner_content .s2-tilte_tag,
+.saas_two_feature_section .s2-feature_text .feature_tag,
+.integration_section .integration_text .feature_tag {
+    color: $main_color;
+    background-color: #c4e1ff;
+}
+
+.saas_two_banner_section .s2-banner_content .banner_btn a {
+    border-color: $main_color;
+}
+
+.saas_two_banner_section .s2-banner_content .banner_btn a:after,
+.saas_two_feature_section .s2-feature_text .saas_btn a:after,
+.s2-pricing_section .s2-pricing_item .s2-pricing_btn a:after {
+    background-color: $main_color;
+}
+
+.saas_btn:before,
+.service_read_more a:after,
+.saas_two_about_section .s2-about_text_icon .s2-about_text a:after,
+.integration_section .integration_text a:after,
+.saas_two_banner_section .s2-banner_content .banner_btn a i,
+.saas_two_feature_section .s2-feature_text .saas_btn a i,
+.s2-pricing_section .s2-pricing_item .s2-pricing_btn a i {
+    background: linear-gradient(-45deg, $main_color 32%, #000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.saas_two_banner_section .s2-banner_content .banner_btn a:before,
+.saas_two_feature_section .s2-feature_text .saas_btn a:before,
+.s2-pricing_section .s2-pricing_item .s2-pricing_btn a:before {
+    box-shadow: 0 0 30px 31px $second_color;
+}
+
+.saas_two_banner_section {
+    max-width: 100%;
+
+    &::before {
+        background-position: top right;
+        width: 100%;
+    }
+}
+
+//slider
+
+//feature
+.str-feature-section {
+    .str-feature-icon-text {
+        .str-feature-text {
+            h3 {
+                font-size: 18px;
+                min-height: 60px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                // white-space: nowrap;
+                padding: 0 20px;
+                max-width: calc(100% - 40px);
+                margin: auto;
+            }
+        }
+    }
+}
+
+//feature
+
+//about
+.str-about-section {
+    .str-about-content {
+        .str-progress-area {
+            h3 {
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+//about
+//about
+
+//pricing_item
+.s2-pricing_section .s2-pricing_item {
+    max-width: 100%;
+}
+
+//pricing_item
+
+//partner
+.str-partner-section {
+    background-color: #edf2f9;
+
+    .owl-item {
+        .str-partner-img {
+            width: 100%;
+            height: 150px;
+            // background-color: #fff;
+            border-radius: 10px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+//partner
+
+//partner
+.crm-partner-section {
+    &::after {
+        display: none;
+    }
+}
+
+//partner
+
+//get in touch
+.str-get-in-touch-section {
+    padding-bottom: 70px;
+    padding-top: 70px;
+}
+
+//get in touch
+
+//breadcurmb
+.saasio-breadcurmb-section {
+    background-color: #2681DB;
+    padding: 160px 0px 70px;
+    text-transform: capitalize;
+}
+
+//breadcurmb
+
+//about
+.saas_two_about_section {
+    background-color: #fafafa;
+
+    .str-section-title {
+        max-width: 100%;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+    }
+
+    .about_content_s2 {
+        .s2-about_img {
+            height: 392px;
+
+            img {
+                object-fit: cover;
+                -o-object-fit: cover;
+            }
+        }
+    }
+}
+
+//about
+
+//works 
+.str-section-title {
+    max-width: 900px;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        opacity: 0.8;
+    }
+}
+
+//works 
+
+//str single service 
+.str-single-service {
+    .str-feature-icon-text {
+        border: 1px solid transparent;
+
+        .str-feature-text {
+            h3 {
+                color: inherit;
+
+                &::before {
+                    top: 35px;
+                    bottom: auto;
+                }
+            }
+        }
+
+        &:hover {
+            background-color: inherit;
+            box-shadow: none;
+            border-color: #eee;
+
+            &:after,
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+.str-feature-section-page {
+    &.str-single-service {
+        .str-feature-icon-text {
+            &:hover {
+                p {
+                    color: inherit;
+                }
+
+                .str-feature-text {
+                    h3 {
+                        &::before {
+                            background-color: $main_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//str single service 
+
+//feature
+.str-feature-section-page {
+    .str-feature-box {
+        margin-bottom: 25px;
+    }
+
+    .str-feature-icon-text {
+        border-radius: 30px;
+
+        .str-feature-text {
+            .str-feature-list {
+                padding: 0 15px;
+            }
+        }
+
+        &:hover {
+            &:before {
+                left: 0;
+            }
+
+            &:after {
+                left: 0;
+            }
+
+            p {
+                color: #fff;
+            }
+        }
+
+        p {
+            text-align: center;
+            // min-height: 80px;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+    }
+}
+
+//feature
+
+//partner page
+.str-partner-section-page {
+    background-color: #fff;
+
+    .str-section-title {
+        margin-bottom: 50px;
+    }
+
+    .str-partner-area {
+        display: grid;
+        // grid-template-columns: repeat(5, calc(20% - 20px));
+        grid-template-columns: repeat(auto-fill, 214px);
+        gap: 25px;
+        justify-content: center;
+
+        .str-partner-img {
+            text-align: center;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0 20px -5px #c5c5c5;
+            transition: all ease .3s;
+
+            &:hover {
+                box-shadow: none;
+            }
+
+            img {
+                object-fit: contain;
+                -o-object-fit: contain;
+                height: 100%;
+                width: 100%;
+                filter: none
+            }
+        }
+    }
+}
+
+//partner page
+
+.smm-case-img {
+    height: 470px;
+    overflow: hidden;
+
+    img {
+        object-fit: cover;
+        -o-object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+//contact page
+.str-contact-section {
+    padding: 70px 0;
+
+    .str-section-title {
+        margin-bottom: 50px;
+
+        h2:before {
+            bottom: -10px;
+            top: auto;
+        }
+    }
+
+    .contact-info {
+        h3 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            padding-left: 45px;
+            position: relative;
+            line-height: 35px;
+            color: #808080;
+
+            i {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 35px;
+                width: 35px;
+                line-height: 35px;
+                text-align: center;
+                border: 1px solid $main_color;
+                border-radius: 50%;
+                color: $main_color;
+            }
+        }
+    }
+
+    .getin_form {
+        .form-control {
+            border: 1px solid #d7d7d7;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            height: 41px;
+            color: #b6b8ba;
+            font-size: 0.875rem;
+            -webkit-border-radius: 15px;
+            border-radius: 15px;
+
+            &:focus {
+                border-color: $main_color;
+            }
+        }
+
+        textarea {
+            min-height: 160px;
+            resize: none;
+        }
+
+        .gradient-btn {
+            -webkit-background-size: 200% auto;
+            background-size: 200% auto;
+            background-image: linear-gradient(-30deg, #008df9 0%, #6006b3 100%);
+            background-position: right center;
+            position: relative;
+            display: inline-block;
+            font-size: 15px;
+            padding: .8rem 2.25rem;
+            line-height: 1;
+            text-transform: capitalize;
+            text-align: center;
+            font-weight: 500;
+            z-index: 1;
+            border: 1px solid transparent;
+            -webkit-border-radius: 30px;
+            border-radius: 30px;
+            color: #fff;
+            transition: all ease .3s;
+
+            &:hover {
+                background-position: left center;
+            }
+        }
+    }
+}
+
+//contact page
+
+//login register page
+.str-login-register-section {
+    padding: 70px 0;
+    background-color: #f7f7f7;
+
+    .str-aboutbg1 {
+        top: -20%;
+        left: 0;
+    }
+
+    .str-aboutbg2 {
+        top: 20%;
+        right: -5%;
+    }
+
+    .str-aboutbg3 {
+        bottom: -10%;
+        left: -10%;
+    }
+
+    .login_register_form {
+        max-width: 750px;
+        margin: auto;
+        width: 100%;
+        background-color: #f9f9f9;
+        padding: 50px 40px;
+        border-radius: 20px;
+        box-shadow: 0 0 15px -3px #d4d4d4;
+
+        label {
+            color: #555;
+            user-select: none;
+            text-transform: capitalize;
+        }
+
+        .form-control {
+            background-color: #fff;
+            border-color: #dadada;
+            height: auto;
+            padding: 10px 15px;
+            border-radius: 20px;
+            color: #000;
+
+            &:focus {
+                border-color: $second_color;
+            }
+        }
+
+        .form-check {
+            label {
+                color: #555;
+                user-select: none;
+            }
+
+            .forget-pass {
+                color: #555;
+                float: right;
+            }
+        }
+
+        .btn {
+            background-color: $second_color;
+            padding: 8px 45px;
+            border-radius: 20px;
+            color: #fff;
+        }
+
+        textarea {
+            resize: none;
+        }
+    }
+}
+
+//login register page
+
+//footer
+.str-footer-area {
+    padding-top: 35px;
+    background-color: #eee;
+
+    .footer-content {
+        .str-footer-widget {
+            .str-newslatter-widget {
+                input {
+                    background-color: #fff;
+                }
+            }
+
+            .str-office-widget {
+
+                .str-office-icon-text,
+                .str-open-hour {
+                    p {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .str-copywright-text {
+        a {
+            margin: 0 5px;
+        }
+    }
+}
+
+//footer
+
+@import "includes/responsive";
+@import "includes/style-rtl";

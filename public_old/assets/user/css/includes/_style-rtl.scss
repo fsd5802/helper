@@ -1,0 +1,294 @@
+html[dir=rtl] {
+   body {
+      text-align: initial;
+      font-family: "Tajawal", sans-serif;
+   }
+
+   .saas_two_main_header {
+      .s2-main-navigation {
+         .navbar-nav {
+            li {
+               margin-left: 20px;
+               margin-right: 0;
+            }
+         }
+      }
+   }
+   .s2-mobile_menu_button {
+      left: 0;
+      right: auto;
+   }
+
+   //global
+   .float-right {
+      float: left !important;
+   }
+
+   .float-left {
+      float: right !important;
+   }
+
+   .text-left {
+      text-align: right !important;
+   }
+
+   .str-section-title {
+      h2 {
+         &:before {
+            left: 0;
+         }
+      }
+   }
+
+   .str-about-content {
+      .str-section-title {
+         h2 {
+            &:before {
+               left: auto;
+               right: 0;
+            }
+         }
+      }
+   }
+
+   .owl-carousel {
+      direction: ltr;
+   }
+
+   .saas_two_banner_section {
+      .s2-banner_content {
+         .banner_btn {
+            a {
+               i {
+                  margin-right: 0;
+                  margin-left: 8px;
+               }
+            }
+         }
+      }
+
+      .s2-banner_area {
+         .banner_mockup {
+            left: -70px;
+            right: auto;
+         }
+      }
+   }
+
+   .str-btn {
+      i {
+         margin-right: 5px;
+         margin-left: 0;
+      }
+   }
+
+   .s2-pricing_section {
+      .s2-pricing_item {
+         .s2-pricing_btn {
+            a {
+               i {
+                  margin-right: 0;
+                  margin-left: 8px;
+               }
+            }
+         }
+      }
+   }
+
+   .saas_two_banner_section {
+      &:before {
+         left: 0;
+         right: auto;
+         @include transform(rotateY(180deg))
+      }
+   }
+
+   .str-about-section {
+      .str-about-content {
+         .str-about-list {
+            li {
+               padding-right: 25px;
+               padding-left: 0;
+
+               &::before {
+                  right: 0;
+                  left: auto;
+               }
+            }
+         }
+      }
+   }
+
+   .saasio-page-breadcurmb {
+      li {
+         a {
+            &:after {
+               left: -18px;
+               right: auto;
+            }
+         }
+      }
+   }
+
+   .s2-pricing_section {
+      .s2-pricing_item {
+         .s2-pricing_list {
+            li {
+               padding: 18px 45px 16px 25px;
+            }
+
+            .s2-checked,
+            .s2-unchecked {
+               margin-left: 10px;
+               margin-right: 0;
+            }
+         }
+      }
+   }
+
+   .saas_two_about_section {
+      .s2-about_text_icon {
+         .s2-about_text {
+            a {
+               &::after {
+                  left: -35px;
+                  right: auto;
+                  @include transform(rotateY(180deg))
+               }
+
+               &:hover {
+                  &::after {
+                     left: -35px;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .str-footer-area {
+      .footer-content {
+         .str-footer-widget {
+            .str-newslatter-widget {
+               button {
+                  left: 0;
+                  right: auto;
+               }
+            }
+
+            .str-office-widget {
+               .str-office-icon-text {
+                  .str-office-icon {
+                     margin-left: 12px;
+                     margin-right: 0;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .news-feed-section {
+      .saasio-blog-text {
+         padding: 22px 0 0 30px;
+      }
+
+      .saasio-post-meta {
+         a {
+            margin-right: 0;
+            margin-left: 15px;
+
+            i {
+               margin-right: 0;
+               margin-left: 3px;
+            }
+         }
+      }
+   }
+
+   .side-bar-widget {
+      .search-widget {
+         button {
+            left: 0;
+            right: auto;
+         }
+      }
+   }
+
+   .recent-post-img-text {
+      .recent-post-img {
+         margin-left: 15px;
+         margin-right: 0;
+      }
+   }
+
+   .str-contact-section {
+      .contact-info {
+         p {
+            padding-left: 0;
+            padding-right: 45px;
+
+            i {
+               right: 0;
+               left: auto;
+            }
+         }
+      }
+   }
+
+   .str-login-register-section {
+      .login_register_form {
+         .form-check {
+            .forget-pass {
+               float: left;
+            }
+         }
+      }
+   }
+
+   .form-check-input {
+      margin-right: -1.25rem;
+      margin-left: 0;
+   }
+
+   .form-check {
+      padding-left: 0;
+      padding-right: 1.25rem;
+   }
+
+   .comment-author-img {
+      margin-left: 20px;
+      margin-right: 0;
+   }
+
+   .comment-form {
+      textarea,
+      input {
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+
+   }
+
+   .s2-pricing_section {
+      .s2-pricing_item {
+         .s2-pricing_price {
+            .pricing_icon {
+               margin-left: 25px;
+               margin-right: 0;
+            }
+         }
+      }
+   }
+
+   .s2-pricing_section {
+      .s2-pricing_item {
+         .s2-pricing_price {
+            .s2-icon_bg {
+               right: auto;
+               left: 10px;
+            }
+         }
+      }
+   }
+}

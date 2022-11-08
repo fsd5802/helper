@@ -1,0 +1,12 @@
+[12-Dec-2021 15:59:42 UTC] PHP Parse error:  syntax error, unexpected ':', expecting '{' in /home/marwan/deltaWebsiteBackend/vendor/symfony/polyfill-php80/bootstrap.php on line 23
+[12-Dec-2021 16:00:01 UTC] PHP Parse error:  syntax error, unexpected ':', expecting '{' in /home/marwan/deltaWebsiteBackend/vendor/symfony/polyfill-php80/bootstrap.php on line 23
+[12-Dec-2021 16:00:29 UTC] PHP Parse error:  syntax error, unexpected ':', expecting '{' in /home/marwan/deltaWebsiteBackend/vendor/symfony/polyfill-php80/bootstrap.php on line 23
+[12-Dec-2021 16:01:36 UTC] PHP Parse error:  syntax error, unexpected ':', expecting '{' in /home/marwan/deltaWebsiteBackend/vendor/symfony/polyfill-php80/bootstrap.php on line 23
+[12-Dec-2021 16:01:39 UTC] PHP Parse error:  syntax error, unexpected ':', expecting '{' in /home/marwan/deltaWebsiteBackend/vendor/symfony/polyfill-php80/bootstrap.php on line 23
+[12-Dec-2021 16:01:41 UTC] PHP Parse error:  syntax error, unexpected ':', expecting '{' in /home/marwan/deltaWebsiteBackend/vendor/symfony/polyfill-php80/bootstrap.php on line 23
+[13-Dec-2021 14:55:21 UTC] PHP Parse error:  syntax error, unexpected ':', expecting '{' in /home/marwan/delta_Backend/vendor/symfony/polyfill-php80/bootstrap.php on line 23
+[13-Dec-2021 14:55:25 UTC] PHP Parse error:  syntax error, unexpected ':', expecting '{' in /home/marwan/delta_Backend/vendor/symfony/polyfill-php80/bootstrap.php on line 23
+[13-Dec-2021 14:55:30 UTC] PHP Parse error:  syntax error, unexpected ':', expecting '{' in /home/marwan/delta_Backend/vendor/symfony/polyfill-php80/bootstrap.php on line 23
+[05-Sep-2022 11:55:59 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 5.6.40. in /home/marwan/delta_Backend/vendor/composer/platform_check.php on line 25
+[08-Sep-2022 07:59:14 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 5.6.40. in /home/marwan/delta_Backend/vendor/composer/platform_check.php on line 25
+[08-Sep-2022 08:02:25 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 5.6.40. in /home/marwan/delta_Backend/vendor/composer/platform_check.php on line 25

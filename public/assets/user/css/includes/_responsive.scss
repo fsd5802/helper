@@ -1,0 +1,117 @@
+@media screen and (max-width: 991px) {
+   .saas_two_main_header {
+      .brand_logo img {
+         max-width: 60px;
+      }
+   }
+
+   .saas_two_main_header .saas_sign_up_btn {
+      top: -22px;
+   }
+
+   .saas_two_banner_section {
+
+      &::before {
+         background-position: unset;
+         width: 80%;
+      }
+   }
+
+   html[dir=rtl] {
+      .saas_two_main_header .saas_sign_up_btn {
+         left: 70px;
+         right: auto;
+      }
+   }
+
+   .str-footer-area .footer-content {
+      padding-bottom: 10px;
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .saas_two_main_header {
+      .saas_sign_up_btn {
+         top: -40px;
+         height: 40px;
+         width: 100px;
+         line-height: 40px;
+         
+      }
+   }
+}
+
+@media screen and (max-width: 575px) {
+   .saas_two_banner_section {
+      .s2-banner_content {
+         h1 {
+            font-size: 22px;
+         }
+
+         p {
+            font-size: 16px;
+            padding-bottom: 35px;
+            line-height: 1.4;
+         }
+      }
+   }
+
+   .saas_two_about_section {
+      .about_content_s2 {
+         padding: 0;
+      }
+
+      .str-section-title {
+         p {
+            font-size: 12px;
+         }
+      }
+
+      .about_content_s2 {
+         .s2-about_img {
+            height: auto;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .saas_two_banner_section .s2-banner_content .banner_btn a {
+      width: 120px;
+      font-size: 12px;
+   }
+
+   .str-feature-box {
+      max-width: initial;
+   }
+
+   .str-login-register-section .login_register_form {
+      padding: 25px 15px;
+
+      .form-check {
+         font-size: 12px;
+      }
+
+      .form-group,
+      .form-control {
+         font-size: 14px;
+      }
+
+      .form-check-input {
+         margin-top: 1px;
+      }
+   }
+
+   .str-contact-section .contact-info p {
+      padding-left: 37px;
+      font-size: 14px;
+      line-height: 30px;
+      margin-bottom: 20px;
+
+      i {
+         height: 30px;
+         width: 30px;
+         line-height: 30px;
+      }
+   }
+}
