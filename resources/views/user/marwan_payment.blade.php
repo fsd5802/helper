@@ -227,6 +227,7 @@
             // UPDATE THE SESSION WITH THE INPUT FROM HOSTED FIELDS
             PaymentSession.updateSessionFromForm('card');
             $('#payButton').attr('disabled', true);
+            $('#divError').removeClass('show');
         }
     </script>
 @endpush
