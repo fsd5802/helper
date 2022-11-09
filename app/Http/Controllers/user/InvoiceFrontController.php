@@ -235,7 +235,7 @@ class InvoiceFrontController extends Controller
                 curl_close($ch5);
                 // dd($result5 );
                 $result5;
-                $result5decode = json_decode( $result5, true );
+                return$result5decode = json_decode( $result5, true );
                  if( isset($result5decode['result']) && $result5decode['result'] == "SUCCESS" ) {
                      return redirect()->route('success_invoice', ['ar', $invoice->id ]);
                  }else {
