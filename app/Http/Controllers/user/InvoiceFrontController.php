@@ -145,7 +145,7 @@ class InvoiceFrontController extends Controller
 
         curl_close($ch3);
         $result3;
-        sleep(15);
+        sleep(10);
         // dd($result3);
         $data_four = array(
                     "apiOperation"=> "AUTHENTICATE_PAYER",
