@@ -242,8 +242,8 @@ class InvoiceFrontController extends Controller
                  if( isset($result5decode['result']) && $result5decode['result'] == "SUCCESS" ) {
                      return redirect()->route('success_invoice', ['ar', $invoice->id ]);
                  }else {
-//                     dd('pay error',$result5);
-                     return redirect()->route('cancel_invoice', ['ar', $invoice->id ]);
+                     dd('pay error',$result5);
+//                     return redirect()->route('cancel_invoice', ['ar', $invoice->id ]);
                  }
     }
 
