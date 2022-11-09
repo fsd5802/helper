@@ -133,7 +133,6 @@ class InvoiceFrontController extends Controller
             ),
         );
 
-
         $postdata_three = json_encode($data_three);
         $ch3 = curl_init($authUrl);
         // curl_setopt($ch3, CURLOPT_POST, 1);
@@ -173,7 +172,6 @@ class InvoiceFrontController extends Controller
                         ),
                     );
 
-
                 $postdata_four = json_encode($data_four);
                 // dd($postdata_four);
                 $ch4 = curl_init($authUrl);
@@ -193,7 +191,6 @@ class InvoiceFrontController extends Controller
 //                    dd($result4);
                     return redirect()->route('cancel_invoice', ['ar', $invoice->id ]);
                 }
-
 
                 // dd($transaction_id);
 
