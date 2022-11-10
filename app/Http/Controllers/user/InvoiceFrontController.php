@@ -46,13 +46,13 @@ class InvoiceFrontController extends Controller
                 'name' =>"required",
                 'email' =>"required|email",
                 'phone' =>"required|numeric",
-                'product_id' =>"required",
+//                'product_id' =>"required",
                 'price' =>"required|numeric",],
                 [
                 'name.required' => trans("custom_validation.name_req"),
                 'phone.required' => trans("custom_validation.phone_req"),
                 'email.required' => trans("custom_validation.email_req"),
-                'product_id.required' => trans("custom_validation.product_req"),
+//                'product_id.required' => trans("custom_validation.product_req"),
                 'price.required' => trans("custom_validation.msg_req"),
         ]);
 

@@ -51,20 +51,20 @@
                                             @enderror
                                         </div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="">الخدمة</label>
-                                            <select name="product_id" id="product_select" class="form-control">
-                                                @foreach ($products as $product)
-                                                    <option product-price="{{ $product->price }}" value="{{ $product->id }}">{{ $product->name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
+{{--                                    <div class="col-lg-12">--}}
+{{--                                        <div class="form-group">--}}
+{{--                                            <label for="">الخدمة</label>--}}
+{{--                                            <select name="product_id" id="product_select" class="form-control">--}}
+{{--                                                @foreach ($products as $product)--}}
+{{--                                                    <option product-price="{{ $product->price }}" value="{{ $product->id }}">{{ $product->name }}</option>--}}
+{{--                                                @endforeach--}}
+{{--                                            </select>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="">السعر (L.E)</label>
-                                            <input class="form-control @error('price') is-invalid @enderror" type="text" name="price" id="price" readonly value="{{ old('price') }}">
+                                            <input class="form-control @error('price') is-invalid @enderror" type="text" name="price" id="price" value="{{ old('price') }}">
                                         </div>
                                     </div>
 
@@ -74,7 +74,7 @@
 
                                 </div>
                             </form>
-                            
+
                         </div>
                     </div>
                 </div>
