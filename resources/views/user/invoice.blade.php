@@ -64,7 +64,7 @@
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="">السعر (L.E)</label>
-                                            <input class="form-control @error('price') is-invalid @enderror" type="text" name="price" id="price" value="{{ old('price') }}">
+                                            <input class="form-control @error('price') is-invalid @enderror" type="number" min="0" step="0.01" name="price" id="price" value="{{ old('price') }}">
                                         </div>
                                     </div>
 
