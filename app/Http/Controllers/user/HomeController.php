@@ -25,16 +25,16 @@ class HomeController extends Controller
         $services = Service::withTranslation()->paginate(13);
         $plans = Plan::withTranslation()->take(4)->get();
         $blogs = Blog::withTranslation()->orderBy('id', 'desc')->take(4)->get();
-        return view('user.home' , [ 'works'=>$works , 
-                                    'portfolios' => $portfolios , 
-                                    'portfolios_all' =>$portfolios_all , 
-                                    'testmonials'=>$testmonials , 
+        return view('user.home' , [ 'works'=>$works ,
+                                    'portfolios' => $portfolios ,
+                                    'portfolios_all' =>$portfolios_all ,
+                                    'testmonials'=>$testmonials ,
                                     'sliders'=>$sliders , 'services' => $services,
                                     'plans'=>$plans , 'blogs'=>$blogs]);
     }
     public function customers()
     {
-        $sliders =Slider::get();
+        $sliders =Slider::paginate(10);
         return view('user.pages.customers' , ['sliders'=>$sliders]);
     }
     //for our-works section
@@ -44,7 +44,7 @@ class HomeController extends Controller
         $portfolios = Portfolio::orderBy('created_at', 'desc')->paginate(6);
         return view("user.pages.works",['works'=>$works , 'portfolios' => $portfolios]);
     }
-    //get all services 
+    //get all services
     public function services()
     {
         $services = Service::withTranslation()->paginate(12);
@@ -64,7 +64,7 @@ class HomeController extends Controller
    //save contact us messages into db;
     public function handleContactUs($locale , ContactRequest $request)
     {
-        
+
         $data = $request->all();
         $contact = Contact::create($data);
         if($contact)
@@ -76,7 +76,7 @@ class HomeController extends Controller
             return response()->json(['error'=>$validator->errors()->all()]);
         }
     }
-    // return all blogs 
+    // return all blogs
     public function blogs()
     {
         $works = Work::withTranslation()->get();
@@ -95,7 +95,7 @@ class HomeController extends Controller
     {
         return view("user.pages.about");
     }
-    //to get prices and plans 
+    //to get prices and plans
     public function plans()
     {
         $plans=Plan::withTranslation()->paginate(6);
