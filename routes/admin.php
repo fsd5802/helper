@@ -54,6 +54,7 @@ Route::group(['prefix' => '{locale}' ,  'middleware' => ['SwitchLanguage','IsAdm
         Route::resource('settings' , 'App\Http\Controllers\admin\SettingController');
 
         Route::resource('invoices' , 'App\Http\Controllers\admin\InvoiceController');
+        Route::resource('jobs' , 'App\Http\Controllers\admin\JobController');
       
         // Route::resource('invoice', InvoiceController::class);
 
