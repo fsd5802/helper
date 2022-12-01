@@ -38,6 +38,8 @@ return[
      'quality'=>'Quality Policy',
      'partner'=>'Partners',
      'team'=>'Company Team',
+      'subject'=>"Subject",
+
 
  ],
  'header'=>[
@@ -50,6 +52,8 @@ return[
     'services'=>"Our Services",
     'contactus'=>"Contact Us",
     'plans'=>"Plans",
+    'jobs'=>"Jobs",
+    'applications'=>"Applications",
     'settings'=>"Settings",
     'pages'=>"Pages",
    ],
@@ -82,6 +86,9 @@ return[
     'rate'=>"Recommendation rate",
     'sales'=>"Increase in Sales",
     'tag'=>"Tag",
+    'skills'=>'Skills',
+    'application'=>'Applications',
+    'cv'=>'CV',
 
    ],
  'roles'=>[

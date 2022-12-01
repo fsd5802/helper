@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class JobTranslation extends Model
 {
     use HasFactory;
-    protected $fillable  = ['title','skills','description'];
+    protected $fillable  = ['name','skills','description'];
 }

@@ -24,6 +24,10 @@ return [
       'create_product'  => 'اضافة منتج',
       'orders'  => 'الطلبات',
       'invoices'  => 'الفواتير',
+      'jobs' => "الوظائف",
+      'applications' => "طلبات التوظيف",
+
+
 
   ],
   'marwan'=>"مروان تك",

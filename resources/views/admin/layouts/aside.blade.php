@@ -2,8 +2,9 @@
     <!--begin::Brand-->
     <div class="brand flex-column-auto" id="kt_brand">
         <!--begin::Logo-->
-        <a href="{{ url('/'.app()->getLocale()) }}" class="brand-logo" target="_blank">
-            <img alt="{{setting()->name}}" @if(setting()->logo != null) src="{{ asset(setting()->logo) }}" @endif class="w-50" />
+        <a href="{{ url('/' . app()->getLocale()) }}" class="brand-logo" target="_blank">
+            <img alt="{{ setting()->name }}" @if (setting()->logo != null) src="{{ asset(setting()->logo) }}" @endif
+                class="w-50" />
         </a>
         <!--end::Logo-->
         <!--begin::Toggle-->
@@ -39,8 +40,8 @@
             <ul class="menu-nav">
                 {{-- Home DashBoard --}}
                 <li class="menu-item menu-item-active" aria-haspopup="true">
-                    <a href="{{url('/' . app()->getLocale() . "/admin")}}" class="menu-link">
-                       @include('admin.includes.aside')
+                    <a href="{{ url('/' . app()->getLocale() . '/admin') }}" class="menu-link">
+                        @include('admin.includes.aside')
                         <span class="menu-text">{{ trans('admin.sidenav.home') }}</span>
                     </a>
                 </li>
@@ -48,7 +49,7 @@
                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         @include('admin.includes.aside')
-                        <span class="menu-text">@lang("admin.sidenav.mangers")</span>
+                        <span class="menu-text">@lang('admin.sidenav.mangers')</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="menu-submenu">
@@ -56,21 +57,21 @@
                         <ul class="menu-subnav">
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
                                 <span class="menu-link">
-                                    <span class="menu-text">@lang("admin.sidenav.mangers")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.mangers')</span>
                                 </span>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="{{ getRoute("admins.index") }}" class="menu-link">
+                                <a href="{{ getRoute('admins.index') }}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">@lang("admin.sidenav.addManger")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.addManger')</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </li>
-               {{--
+                {{--
                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         @include('admin.includes.aside')
@@ -84,7 +85,7 @@
                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         @include('admin.includes.aside')
-                        <span class="menu-text">@lang("admin.sidenav.blogs")</span>
+                        <span class="menu-text">@lang('admin.sidenav.blogs')</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="menu-submenu">
@@ -92,25 +93,25 @@
                         <ul class="menu-subnav">
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
                                 <span class="menu-link">
-                                    <span class="menu-text">@lang("admin.sidenav.blogs")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.blogs')</span>
                                 </span>
                             </li>
                             {{-- blog --}}
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="{{ getRoute('pages.createBlog') }}" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-dot">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">@lang("admin.sidenav.blog")</span>
-                                            </a>
-                                        </li>
-                             {{-- add blogs --}}
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="{{ getRoute("blogs.index") }}" class="menu-link">
+                                <a href="{{ getRoute('pages.createBlog') }}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">@lang("admin.sidenav.addBlog")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.blog')</span>
+                                </a>
+                            </li>
+                            {{-- add blogs --}}
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{ getRoute('blogs.index') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">@lang('admin.sidenav.addBlog')</span>
                                 </a>
                             </li>
 
@@ -121,7 +122,7 @@
                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         @include('admin.includes.aside')
-                        <span class="menu-text">@lang("admin.sidenav.portfolios")</span>
+                        <span class="menu-text">@lang('admin.sidenav.portfolios')</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="menu-submenu">
@@ -129,23 +130,23 @@
                         <ul class="menu-subnav">
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
                                 <span class="menu-link">
-                                    <span class="menu-text">@lang("admin.sidenav.portfolios")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.portfolios')</span>
                                 </span>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                            <a href="{{ getRoute('pages.createPortfolio') }}" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-dot">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">@lang("admin.sidenav.portfolio")</span>
-                                            </a>
-                                        </li>
-                            <li class="menu-item" aria-haspopup="true">
-                                <a href="{{ getRoute("portfolios.index") }}" class="menu-link">
+                                <a href="{{ getRoute('pages.createPortfolio') }}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">@lang("admin.sidenav.addPortfolio")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.portfolio')</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{ getRoute('portfolios.index') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">@lang('admin.sidenav.addPortfolio')</span>
                                 </a>
                             </li>
 
@@ -157,15 +158,15 @@
                         <ul class="menu-subnav">
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
                                 <span class="menu-link">
-                                    <span class="menu-text">@lang("admin.sidenav.blogs")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.blogs')</span>
                                 </span>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="{{ getRoute("works.index") }}" class="menu-link">
+                                <a href="{{ getRoute('works.index') }}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">@lang("admin.sidenav.addWork")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.addWork')</span>
                                 </a>
                             </li>
 
@@ -176,7 +177,7 @@
                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         @include('admin.includes.aside')
-                        <span class="menu-text">@lang("admin.sidenav.services")</span>
+                        <span class="menu-text">@lang('admin.sidenav.services')</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="menu-submenu">
@@ -184,23 +185,23 @@
                         <ul class="menu-subnav">
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
                                 <span class="menu-link">
-                                    <span class="menu-text">@lang("admin.sidenav.services")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.services')</span>
                                 </span>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                            <a href="{{ getRoute('pages.createService') }}" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-dot">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">@lang("admin.sidenav.service")</span>
-                                            </a>
-                                        </li>
-                            <li class="menu-item" aria-haspopup="true">
-                                <a href="{{ getRoute("services.index") }}" class="menu-link">
+                                <a href="{{ getRoute('pages.createService') }}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">@lang("admin.sidenav.addService")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.service')</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{ getRoute('services.index') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">@lang('admin.sidenav.addService')</span>
                                 </a>
                             </li>
                         </ul>
@@ -210,7 +211,7 @@
                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         @include('admin.includes.aside')
-                        <span class="menu-text">@lang("admin.sidenav.plans")</span>
+                        <span class="menu-text">@lang('admin.sidenav.plans')</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="menu-submenu">
@@ -218,15 +219,15 @@
                         <ul class="menu-subnav">
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
                                 <span class="menu-link">
-                                    <span class="menu-text">@lang("admin.sidenav.plans")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.plans')</span>
                                 </span>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="{{ getRoute("plans.index") }}" class="menu-link">
+                                <a href="{{ getRoute('plans.index') }}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">@lang("admin.sidenav.addPlan")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.addPlan')</span>
                                 </a>
                             </li>
                         </ul>
@@ -236,7 +237,7 @@
                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         @include('admin.includes.aside')
-                        <span class="menu-text">@lang("admin.sidenav.sliders")</span>
+                        <span class="menu-text">@lang('admin.sidenav.sliders')</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="menu-submenu">
@@ -244,24 +245,24 @@
                         <ul class="menu-subnav">
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
                                 <span class="menu-link">
-                                    <span class="menu-text">@lang("admin.sidenav.sliders")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.sliders')</span>
                                 </span>
                             </li>
                             {{-- customer --}}
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="{{ getRoute('pages.createCustomer') }}" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-dot">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">@lang("admin.sidenav.customer")</span>
-                                            </a>
-                                        </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="{{ getRoute("sliders.index") }}" class="menu-link">
+                                <a href="{{ getRoute('pages.createCustomer') }}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">@lang("admin.sidenav.addSlider")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.customer')</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{ getRoute('sliders.index') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">@lang('admin.sidenav.addSlider')</span>
                                 </a>
                             </li>
 
@@ -272,7 +273,7 @@
                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         @include('admin.includes.aside')
-                        <span class="menu-text">@lang("admin.sidenav.testimonials")</span>
+                        <span class="menu-text">@lang('admin.sidenav.testimonials')</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="menu-submenu">
@@ -280,15 +281,15 @@
                         <ul class="menu-subnav">
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
                                 <span class="menu-link">
-                                    <span class="menu-text">@lang("admin.sidenav.testimonials")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.testimonials')</span>
                                 </span>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="{{ getRoute("testmonials.index") }}" class="menu-link">
+                                <a href="{{ getRoute('testmonials.index') }}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">@lang("admin.sidenav.addTestimonial")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.addTestimonial')</span>
                                 </a>
                             </li>
 
@@ -315,30 +316,30 @@
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">@lang("admin.sidenav.web_setting")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.web_setting')</span>
                                     <i class="menu-arrow"></i>
                                 </a>
                                 <div class="menu-submenu">
                                     <i class="menu-arrow"></i>
                                     <ul class="menu-subnav">
-                                            {{-- main settings --}}
+                                        {{-- main settings --}}
                                         <li class="menu-item" aria-haspopup="true">
-                                            <a href="{{ getRoute("settings.index") }}" class="menu-link">
+                                            <a href="{{ getRoute('settings.index') }}" class="menu-link">
                                                 @include('admin.includes.aside')
-                                                <span class="menu-text">@lang("admin.sidenav.main_setting")</span>
+                                                <span class="menu-text">@lang('admin.sidenav.main_setting')</span>
                                             </a>
                                         </li>
-                                            {{--socail media --}}
+                                        {{-- socail media --}}
                                         <li class="menu-item" aria-haspopup="true">
-                                            <a href="{{ getRoute("icons.index") }}" class="menu-link">
+                                            <a href="{{ getRoute('icons.index') }}" class="menu-link">
                                                 @include('admin.includes.aside')
-                                                <span class="menu-text">@lang("admin.sidenav.socialMedia")</span>
+                                                <span class="menu-text">@lang('admin.sidenav.socialMedia')</span>
                                             </a>
                                         </li>
-                                        {{-- Contact us--}}
+                                        {{-- Contact us --}}
                                         <li class="menu-item" aria-haspopup="true">
-                                            <a href="{{getRoute("contacts.index")}}" class="menu-link">
-                                            @include('admin.includes.aside')
+                                            <a href="{{ getRoute('contacts.index') }}" class="menu-link">
+                                                @include('admin.includes.aside')
                                                 <span class="menu-text">{{ trans('admin.sidenav.contactus') }}</span>
                                             </a>
                                         </li>
@@ -351,7 +352,7 @@
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">@lang("admin.sidenav.other_pages")</span>
+                                    <span class="menu-text">@lang('admin.sidenav.other_pages')</span>
                                     <i class="menu-arrow"></i>
                                 </a>
                                 <div class="menu-submenu">
@@ -362,7 +363,7 @@
                                                 <i class="menu-bullet menu-bullet-dot">
                                                     <span></span>
                                                 </i>
-                                                <span class="menu-text">@lang("admin.sidenav.aboutus")</span>
+                                                <span class="menu-text">@lang('admin.sidenav.aboutus')</span>
                                             </a>
                                         </li>
                                         {{-- vision --}}
@@ -371,7 +372,7 @@
                                                 <i class="menu-bullet menu-bullet-dot">
                                                     <span></span>
                                                 </i>
-                                                <span class="menu-text">@lang("admin.sidenav.vision")</span>
+                                                <span class="menu-text">@lang('admin.sidenav.vision')</span>
                                             </a>
                                         </li>
                                         {{-- mission --}}
@@ -380,7 +381,7 @@
                                                 <i class="menu-bullet menu-bullet-dot">
                                                     <span></span>
                                                 </i>
-                                                <span class="menu-text">@lang("admin.sidenav.mission")</span>
+                                                <span class="menu-text">@lang('admin.sidenav.mission')</span>
                                             </a>
                                         </li>
                                         {{-- Quality Policy --}}
@@ -389,7 +390,7 @@
                                                 <i class="menu-bullet menu-bullet-dot">
                                                     <span></span>
                                                 </i>
-                                                <span class="menu-text">@lang("admin.sidenav.quality")</span>
+                                                <span class="menu-text">@lang('admin.sidenav.quality')</span>
                                             </a>
                                         </li>
                                         {{-- Partener --}}
@@ -398,7 +399,7 @@
                                                 <i class="menu-bullet menu-bullet-dot">
                                                     <span></span>
                                                 </i>
-                                                <span class="menu-text">@lang("admin.sidenav.partner")</span>
+                                                <span class="menu-text">@lang('admin.sidenav.partner')</span>
                                             </a>
                                         </li>
                                         {{-- Company Team --}}
@@ -407,7 +408,7 @@
                                                 <i class="menu-bullet menu-bullet-dot">
                                                     <span></span>
                                                 </i>
-                                                <span class="menu-text">@lang("admin.sidenav.team")</span>
+                                                <span class="menu-text">@lang('admin.sidenav.team')</span>
                                             </a>
                                         </li>
 
@@ -419,7 +420,7 @@
                                                 <i class="menu-bullet menu-bullet-dot">
                                                     <span></span>
                                                 </i>
-                                                <span class="menu-text">@lang("admin.sidenav.plan")</span>
+                                                <span class="menu-text">@lang('admin.sidenav.plan')</span>
                                             </a>
                                         </li>
 
@@ -444,7 +445,8 @@
                                 width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <rect x="0" y="0" width="24" height="24" />
-                                    <rect fill="#000000" opacity="0.3" x="4" y="4" width="8" height="16" />
+                                    <rect fill="#000000" opacity="0.3" x="4" y="4"
+                                        width="8" height="16" />
                                     <path
                                         d="M6,18 L9,18 C9.66666667,18.1143819 10,18.4477153 10,19 C10,19.5522847 9.66666667,19.8856181 9,20 L4,20 L4,15 C4,14.3333333 4.33333333,14 5,14 C5.66666667,14 6,14.3333333 6,15 L6,18 Z M18,18 L18,15 C18.1143819,14.3333333 18.4477153,14 19,14 C19.5522847,14 19.8856181,14.3333333 20,15 L20,20 L15,20 C14.3333333,20 14,19.6666667 14,19 C14,18.3333333 14.3333333,18 15,18 L18,18 Z M18,6 L15,6 C14.3333333,5.88561808 14,5.55228475 14,5 C14,4.44771525 14.3333333,4.11438192 15,4 L20,4 L20,9 C20,9.66666667 19.6666667,10 19,10 C18.3333333,10 18,9.66666667 18,9 L18,6 Z M6,6 L6,9 C5.88561808,9.66666667 5.55228475,10 5,10 C4.44771525,10 4.11438192,9.66666667 4,9 L4,4 L9,4 C9.66666667,4 10,4.33333333 10,5 C10,5.66666667 9.66666667,6 9,6 L6,6 Z"
                                         fill="#000000" fill-rule="nonzero" />
@@ -464,8 +466,7 @@
                                     <span class="menu-text">{{ trans('general.aside.product') }}</span>
                                 </span>
                             </li>
-                            <li class="menu-item menu-item-submenu"
-                                aria-haspopup="true" data-menu-toggle="hover">
+                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                                 <a href="{{ getRoute('product.index') }}" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
@@ -489,7 +490,8 @@
                                 width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <rect x="0" y="0" width="24" height="24" />
-                                    <rect fill="#000000" opacity="0.3" x="4" y="4" width="8" height="16" />
+                                    <rect fill="#000000" opacity="0.3" x="4" y="4"
+                                        width="8" height="16" />
                                     <path
                                         d="M6,18 L9,18 C9.66666667,18.1143819 10,18.4477153 10,19 C10,19.5522847 9.66666667,19.8856181 9,20 L4,20 L4,15 C4,14.3333333 4.33333333,14 5,14 C5.66666667,14 6,14.3333333 6,15 L6,18 Z M18,18 L18,15 C18.1143819,14.3333333 18.4477153,14 19,14 C19.5522847,14 19.8856181,14.3333333 20,15 L20,20 L15,20 C14.3333333,20 14,19.6666667 14,19 C14,18.3333333 14.3333333,18 15,18 L18,18 Z M18,6 L15,6 C14.3333333,5.88561808 14,5.55228475 14,5 C14,4.44771525 14.3333333,4.11438192 15,4 L20,4 L20,9 C20,9.66666667 19.6666667,10 19,10 C18.3333333,10 18,9.66666667 18,9 L18,6 Z M6,6 L6,9 C5.88561808,9.66666667 5.55228475,10 5,10 C4.44771525,10 4.11438192,9.66666667 4,9 L4,4 L9,4 C9.66666667,4 10,4.33333333 10,5 C10,5.66666667 9.66666667,6 9,6 L6,6 Z"
                                         fill="#000000" fill-rule="nonzero" />
@@ -510,8 +512,7 @@
                                     <span class="menu-text">{{ trans('general.aside.product') }}</span>
                                 </span>
                             </li>
-                            <li class="menu-item menu-item-submenu"
-                                aria-haspopup="true" data-menu-toggle="hover">
+                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                                 <a href="{{ getRoute('orders') }}" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
@@ -526,59 +527,160 @@
                 {{-- end orders  section --}}
 
 
-                                {{-- start invoices  section --}}
-                                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="javascript:;" class="menu-link menu-toggle">
-                                        <span class="svg-icon menu-icon">
-                                            <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                    <rect x="0" y="0" width="24" height="24" />
-                                                    <rect fill="#000000" opacity="0.3" x="4" y="4" width="8" height="16" />
-                                                    <path
-                                                        d="M6,18 L9,18 C9.66666667,18.1143819 10,18.4477153 10,19 C10,19.5522847 9.66666667,19.8856181 9,20 L4,20 L4,15 C4,14.3333333 4.33333333,14 5,14 C5.66666667,14 6,14.3333333 6,15 L6,18 Z M18,18 L18,15 C18.1143819,14.3333333 18.4477153,14 19,14 C19.5522847,14 19.8856181,14.3333333 20,15 L20,20 L15,20 C14.3333333,20 14,19.6666667 14,19 C14,18.3333333 14.3333333,18 15,18 L18,18 Z M18,6 L15,6 C14.3333333,5.88561808 14,5.55228475 14,5 C14,4.44771525 14.3333333,4.11438192 15,4 L20,4 L20,9 C20,9.66666667 19.6666667,10 19,10 C18.3333333,10 18,9.66666667 18,9 L18,6 Z M6,6 L6,9 C5.88561808,9.66666667 5.55228475,10 5,10 C4.44771525,10 4.11438192,9.66666667 4,9 L4,4 L9,4 C9.66666667,4 10,4.33333333 10,5 C10,5.66666667 9.66666667,6 9,6 L6,6 Z"
-                                                        fill="#000000" fill-rule="nonzero" />
-                                                </g>
-                                            </svg>
-                                            <!--end::Svg Icon-->
-                                        </span>
-                                        
-                                        <span class="menu-text">{{ trans('general.aside.invoices') }}</span>
-                                        <i class="menu-arrow"></i>
-                                    </a>
-                                    <div class="menu-submenu">
-                                        <i class="menu-arrow"></i>
-                                        <ul class="menu-subnav">
-                
-                                            <li class="menu-item menu-item-parent" aria-haspopup="true">
-                                                <span class="menu-link">
-                                                    <span class="menu-text">{{ trans('general.aside.product') }}</span>
-                                                </span>
-                                            </li>
-                                            <li class="menu-item menu-item-submenu"
-                                                aria-haspopup="true" data-menu-toggle="hover">
-                                                <a href="{{ getRoute('invoice.index') }}" class="menu-link menu-toggle">
-                                                    <i class="menu-bullet menu-bullet-dot">
-                                                        <span></span>
-                                                    </i>
-                                                    <span class="menu-text">{{ trans('general.aside.invoices') }}</span>
-                                                    <i class="menu-arrow"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                {{-- end invoices  section --}}
+                {{-- start invoices  section --}}
+                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <span class="svg-icon menu-icon">
+                            <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect x="0" y="0" width="24" height="24" />
+                                    <rect fill="#000000" opacity="0.3" x="4" y="4"
+                                        width="8" height="16" />
+                                    <path
+                                        d="M6,18 L9,18 C9.66666667,18.1143819 10,18.4477153 10,19 C10,19.5522847 9.66666667,19.8856181 9,20 L4,20 L4,15 C4,14.3333333 4.33333333,14 5,14 C5.66666667,14 6,14.3333333 6,15 L6,18 Z M18,18 L18,15 C18.1143819,14.3333333 18.4477153,14 19,14 C19.5522847,14 19.8856181,14.3333333 20,15 L20,20 L15,20 C14.3333333,20 14,19.6666667 14,19 C14,18.3333333 14.3333333,18 15,18 L18,18 Z M18,6 L15,6 C14.3333333,5.88561808 14,5.55228475 14,5 C14,4.44771525 14.3333333,4.11438192 15,4 L20,4 L20,9 C20,9.66666667 19.6666667,10 19,10 C18.3333333,10 18,9.66666667 18,9 L18,6 Z M6,6 L6,9 C5.88561808,9.66666667 5.55228475,10 5,10 C4.44771525,10 4.11438192,9.66666667 4,9 L4,4 L9,4 C9.66666667,4 10,4.33333333 10,5 C10,5.66666667 9.66666667,6 9,6 L6,6 Z"
+                                        fill="#000000" fill-rule="nonzero" />
+                                </g>
+                            </svg>
+                            <!--end::Svg Icon-->
+                        </span>
+
+                        <span class="menu-text">{{ trans('general.aside.invoices') }}</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link">
+                                    <span class="menu-text">{{ trans('general.aside.product') }}</span>
+                                </span>
+                            </li>
+                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                <a href="{{ getRoute('invoice.index') }}" class="menu-link menu-toggle">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{ trans('general.aside.invoices') }}</span>
+                                    <i class="menu-arrow"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                {{-- end invoices  section --}}
+
+
+                {{-- start jobs  section --}}
+                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <span class="svg-icon menu-icon">
+                            <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect x="0" y="0" width="24" height="24" />
+                                    <rect fill="#000000" opacity="0.3" x="4" y="4"
+                                        width="8" height="16" />
+                                    <path
+                                        d="M6,18 L9,18 C9.66666667,18.1143819 10,18.4477153 10,19 C10,19.5522847 9.66666667,19.8856181 9,20 L4,20 L4,15 C4,14.3333333 4.33333333,14 5,14 C5.66666667,14 6,14.3333333 6,15 L6,18 Z M18,18 L18,15 C18.1143819,14.3333333 18.4477153,14 19,14 C19.5522847,14 19.8856181,14.3333333 20,15 L20,20 L15,20 C14.3333333,20 14,19.6666667 14,19 C14,18.3333333 14.3333333,18 15,18 L18,18 Z M18,6 L15,6 C14.3333333,5.88561808 14,5.55228475 14,5 C14,4.44771525 14.3333333,4.11438192 15,4 L20,4 L20,9 C20,9.66666667 19.6666667,10 19,10 C18.3333333,10 18,9.66666667 18,9 L18,6 Z M6,6 L6,9 C5.88561808,9.66666667 5.55228475,10 5,10 C4.44771525,10 4.11438192,9.66666667 4,9 L4,4 L9,4 C9.66666667,4 10,4.33333333 10,5 C10,5.66666667 9.66666667,6 9,6 L6,6 Z"
+                                        fill="#000000" fill-rule="nonzero" />
+                                </g>
+                            </svg>
+                            <!--end::Svg Icon-->
+                        </span>
+
+                        <span class="menu-text">{{ trans('general.aside.jobs') }}</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link">
+                                    <span class="menu-text">{{ trans('general.aside.product') }}</span>
+                                </span>
+                            </li>
+                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                <a href="{{ getRoute('jobs.index') }}" class="menu-link menu-toggle">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{ trans('general.add_new') }}</span>
+                                    <i class="menu-arrow"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                {{-- end jobs  section --}}
+
+                {{-- start jobs  section --}}
+                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <span class="svg-icon menu-icon">
+                            <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect x="0" y="0" width="24" height="24" />
+                                    <rect fill="#000000" opacity="0.3" x="4" y="4"
+                                        width="8" height="16" />
+                                    <path
+                                        d="M6,18 L9,18 C9.66666667,18.1143819 10,18.4477153 10,19 C10,19.5522847 9.66666667,19.8856181 9,20 L4,20 L4,15 C4,14.3333333 4.33333333,14 5,14 C5.66666667,14 6,14.3333333 6,15 L6,18 Z M18,18 L18,15 C18.1143819,14.3333333 18.4477153,14 19,14 C19.5522847,14 19.8856181,14.3333333 20,15 L20,20 L15,20 C14.3333333,20 14,19.6666667 14,19 C14,18.3333333 14.3333333,18 15,18 L18,18 Z M18,6 L15,6 C14.3333333,5.88561808 14,5.55228475 14,5 C14,4.44771525 14.3333333,4.11438192 15,4 L20,4 L20,9 C20,9.66666667 19.6666667,10 19,10 C18.3333333,10 18,9.66666667 18,9 L18,6 Z M6,6 L6,9 C5.88561808,9.66666667 5.55228475,10 5,10 C4.44771525,10 4.11438192,9.66666667 4,9 L4,4 L9,4 C9.66666667,4 10,4.33333333 10,5 C10,5.66666667 9.66666667,6 9,6 L6,6 Z"
+                                        fill="#000000" fill-rule="nonzero" />
+                                </g>
+                            </svg>
+                            <!--end::Svg Icon-->
+                        </span>
+
+                        <span class="menu-text">{{ trans('general.aside.applications') }}</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link">
+                                    <span class="menu-text">{{ trans('general.aside.product') }}</span>
+                                </span>
+                            </li>
+                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                <a href="{{ getRoute('applications.index') }}" class="menu-link menu-toggle">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{ trans('general.show') }}</span>
+                                    <i class="menu-arrow"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                {{-- end jobs  section --}}
 
 
                 {{-- Logout Button --}}
-                <li class="menu-section">
-                    <a href="{{ getRoute("logout") }}">
-                    <h4 class="menu-text text-danger">{{ trans("admin.sidenav.logout") }}</h4>
-                    <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
-                    </a>
-                </li>
+                {{-- <li class="menu-section">
+                    <form action="{{ route('logout') }}" method="post">
+                       @csrf
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                {{ trans('general.buttons.logout') }}
+                            </button>
+                        </div>
+                    </form>
+                </li> --}}
+                {{-- <li class="menu-section">
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button class="btn btn-danger">{{ trans('admin.sidenav.logout') }}</button>
+                    </form>
+                </li> --}}
             </ul>
             <!--end::Menu Nav-->
         </div>

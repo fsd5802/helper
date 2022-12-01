@@ -22,6 +22,7 @@ return [
       'contactus'=> "Contact Us",
       'plans'=>'Plans & Prices',
       'blogs'=>"Blogs",
+      'jobs'=>"Our jobs",
     ],
     'about'=>[
        'sales'=>'Increase in Sales',
@@ -33,6 +34,7 @@ return [
       'aboutus' =>"About Us",
       'ourwork'=>"Our Works",
       'services' =>"Services",
+      'jobs' =>"Jobs",
       'customers'=>"Customers",
       'blogs'=>"Blogs",
       'ticketsupport'=>"Ticket Support",

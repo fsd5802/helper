@@ -17,7 +17,7 @@ class CreateJobTranslationsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('job_id');
             $table->string('locale')->index();
-            $table->string('title');
+            $table->string('name');
             $table->string('skills');
             $table->text('description');
             $table->unique(['job_id','locale']);

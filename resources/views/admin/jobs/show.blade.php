@@ -34,21 +34,19 @@
                         </div>
 
                         <div class="col form-group">
+                            <label>@lang('admin.general.skills')<span class="text-danger">*</span></label>
+
+                            <p>{{ $job->translate($locale)->skills }}</p>
+                        </div>
+
+                        <div class="col form-group">
                             <label>@lang('admin.general.body')<span class="text-danger">*</span></label>
 
-                            <p>{!! $job->translate($locale)->desc !!}</p>
+                            <p>{!! $job->translate($locale)->description !!}</p>
                         </div>
 
                     </div>
                 @endforeach
-            </div>
-
-            <div class="col form-group">
-                @if (isset($job->image))
-                    <label>@lang('slider.image') <span class="text-danger">*</span></label>
-                    <br>
-                    <img src="{{ asset($job->image) }}" class="w-25">
-                @endif
             </div>
 
         </div>

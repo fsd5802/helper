@@ -13,6 +13,7 @@ use App\Models\Contact;
 use App\Http\Requests\user\ContactRequest;
 use App\Models\Plan;
 use App\Models\Blog;
+use App\Models\Job;
 class HomeController extends Controller
 {
     public function index()
@@ -50,11 +51,22 @@ class HomeController extends Controller
         $services = Service::withTranslation()->paginate(12);
         return view("user.pages.services",['services'=>$services]);
     }
+    //get all jobss
+    public function jobs()
+    {
+        $jobs = Job::withTranslation()->paginate(12);
+        return view("user.pages.jobs",['jobs'=>$jobs]);
+    }
     //service details
     public function single_service($locale ,  $service)
     {
         $service = Service::findorfail($service);
         return view("user.pages.single_service" , ['service'=>$service]);
+    }
+    public function single_job($locale ,  $job)
+    {
+        $job = Job::findorfail($job);
+        return view("user.pages.single_job" , ['job'=>$job]);
     }
     //get form of contact us section
     public function getContactUs()

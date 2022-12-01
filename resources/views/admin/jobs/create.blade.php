@@ -36,11 +36,23 @@
                         <div class="col form-group">
                             <label>@lang('admin.general.name') (@lang('general.'.$locale))<span
                                     class="text-danger">*</span></label>
-                            <input type="text" name="{{ $locale . '[title]' }}" id="{{ $locale . '[name]' }}"
+                            <input type="text" name="{{ $locale . '[name]' }}" id="{{ $locale . '[name]' }}"
                                 placeholder="@lang('slider.name')"
                                 class="form-control @error($locale . '.name') is-invalid @enderror"
-                                value="{{ old($locale . '.title') }}">
+                                value="{{ old($locale . '.name') }}">
                                 @error("$locale.name")
+                                    <div class="alert my-2 alert-danger">{{ $message }}</div>
+                                @enderror
+                        </div>
+                        
+                        <div class="col form-group">
+                            <label>@lang('admin.general.skills') (@lang('general.'.$locale))<span
+                                    class="text-danger">*</span></label>
+                            <input type="text" name="{{ $locale . '[skills]' }}" id="{{ $locale . '[skills]' }}"
+                                placeholder="@lang('admin.general.skills')"
+                                class="form-control @error($locale . '.skills') is-invalid @enderror"
+                                value="{{ old($locale . '.skills') }}">
+                                @error("$locale.skills")
                                     <div class="alert my-2 alert-danger">{{ $message }}</div>
                                 @enderror
                         </div>
@@ -48,9 +60,9 @@
                         <div class="col form-group">
                             <label>@lang('admin.general.desc')(@lang('general.'.$locale))<span
                                     class="text-danger">*</span></label>
-                            <textarea class="form-control @error($locale . '.desc') is-invalid @enderror "
-                                type="text" name="{{ $locale . '[desc]' }}" rows="4"
-                                id="{{ $locale }}.editor1">{{ old($locale . '.desc') }}</textarea>
+                            <textarea class="form-control @error($locale . '.description') is-invalid @enderror "
+                                type="text" name="{{ $locale . '[description]' }}" rows="4"
+                                id="{{ $locale }}.editor1">{{ old($locale . '.description') }}</textarea>
                             <script>
                                 CKEDITOR.replace('{{ $locale }}.editor1', {
                                     extraPlugins: 'bidi',
@@ -62,14 +74,14 @@
                                     removeButtons: 'PasteFromWord'
                                 });
                             </script>
-                            @error("$locale.desc")
+                            @error("$locale.description")
                                 <div class="alert my-2 alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                     </div>
                 @endforeach
             </div>     
-            <div class="col form-group">
+            {{-- <div class="col form-group">
                 <label>@lang('admin.general.image') <span class="text-danger">*</span></label>
                 <input
                     type="file"
@@ -80,7 +92,7 @@
                      @error("image")
                       <div class="alert my-2 alert-danger">{{ $message }}</div>
                      @enderror
-            </div>        
+            </div>         --}}
         </div>
     </div>
     <div class="card card-custom">

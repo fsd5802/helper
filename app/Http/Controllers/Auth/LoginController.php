@@ -9,6 +9,7 @@ class LoginController extends Controller
 {
     function index()
     {
+      // dd(10);
       return view('user.auth.login');
     }
     function handleLogin(Request $request)

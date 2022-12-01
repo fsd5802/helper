@@ -1,15 +1,17 @@
 
 @if($name && $value)
 
-<a href="{{getRoute($name.'.show',$value->id)}}" class="btn btn-sm btn-clean
+<a href="{{getRoute($name.'.show',$value->id    )}}" class="btn btn-sm btn-clean
 btn-icon mr-2" title="@lang('general.show')">
     <i class="fa fa-eye"></i>
 </a>
 
+@if (!request()->routeIs('applications.*'))   
 <a href="{{getRoute($name.'.edit',$value->id)}}" class="btn btn-sm btn-clean
 btn-icon mr-2 custimizeEditBtn" title="@lang('general.edit')">
     <i class="fa fa-edit"></i>
 </a>
+@endif
 
 
 <form id="delete-form-{{ $value->id }}" style="display: inline-table;" action="{{ getRoute($name.'.destroy',$value->id) }}"

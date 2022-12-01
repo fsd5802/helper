@@ -27,7 +27,7 @@
 
                 <!--begin::Button-->
                 {{-- @can('create '.View::getSection('permission')) --}}
-                  @if(Auth::user()->type == "superadmin")  <a href="@yield('create_route')" class="btn btn-primary font-weight-bolder disableBtnCreate">
+                  @if(Auth::user()->type == "superadmin" && !request()->routeIs('applications.*'))  <a href="@yield('create_route')" class="btn btn-primary font-weight-bolder disableBtnCreate">
                     <i class="fas fa-plus-circle fa-sm"></i>@lang('general.add_new')</a> @endif
                 {{-- @endcan --}}
                 <!--end::Button-->

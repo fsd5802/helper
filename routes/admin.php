@@ -55,9 +55,9 @@ Route::group(['prefix' => '{locale}' ,  'middleware' => ['SwitchLanguage','IsAdm
 
         Route::resource('invoices' , 'App\Http\Controllers\admin\InvoiceController');
         Route::resource('jobs' , 'App\Http\Controllers\admin\JobController');
+        Route::resource('applications', 'App\Http\Controllers\admin\ApplicationController');
       
         // Route::resource('invoice', InvoiceController::class);
-
 
        //for icons
        Route::resource('icons' , 'App\Http\Controllers\admin\IconController');
@@ -109,6 +109,8 @@ Route::group(['prefix' => '{locale}' ,  'middleware' => ['SwitchLanguage','IsAdm
       Route::post('pages/team/store' , 'App\Http\Controllers\admin\PageController@saveTeam')->name("pages.saveTeam");
       
       Route::get('orders' , 'App\Http\Controllers\admin\OrderController@orders')->name("orders");
+      Route::get('/cv/download/{id}', 'App\Http\Controllers\admin\ApplicationController@download')->name('cv.download');
+
 
     });
 });

@@ -11,5 +11,5 @@ class Job extends Model implements TranslatableContract
     use HasFactory,Translatable;
 
     protected $fillable = ['id'];
-    public $translatedAttributes = ['title','skills','description'];
+    public $translatedAttributes = ['name','skills','description'];
 }

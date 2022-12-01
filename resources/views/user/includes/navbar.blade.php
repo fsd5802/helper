@@ -29,6 +29,7 @@
                   <li><a href="{{ getRoute("aboutus") }}">@lang("user.navbar.aboutus")</a></li>
                   <li><a href="{{ getRoute('works') }}">@lang("user.navbar.ourwork")</a></li>
                   <li><a href="{{ getRoute('services') }}">@lang("user.navbar.services")</a></li>
+                  <li><a href="{{ getRoute('jobs') }}">@lang("user.navbar.jobs")</a></li>
                   <li><a href="{{ getRoute("customers") }}">@lang("user.navbar.customers")</a></li>
                   <li><a href="{{ getRoute("blogs") }}">@lang("user.navbar.blogs")</a></li>
                   <li><a href="{{ getRoute("plans") }}">@lang("user.navbar.ticketsupport") </a></li>

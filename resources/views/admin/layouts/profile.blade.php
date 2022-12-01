@@ -44,10 +44,19 @@
                             <span class="navi-text text-muted text-hover-primary">{{auth()->user()->email}}</span>
                         </span>
                     </a>
-                    <a class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5" href="{{ route('logout') }}">
+                    {{-- <a class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5" href="{{ route('logout') }}">
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         @lang('admin.sidenav.logout')
-                    </a>
+                    </a> --}}
+
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+        
+                        <button type="submit"class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            @lang('admin.sidenav.logout')
+                        </button>
+                    </form>
 
                     {{-- <form id="logout-form" action="{{ getRoute('logout') }}" method="POST" class="d-none">
                         @csrf

@@ -18,5 +18,6 @@ return [
   'img_req'=>"The image field is required",
   'product_req'=>"The product field is required",
   'price'=>"The price field is required",
+  'skills_req'=>"The kills field is required",
 
 ];

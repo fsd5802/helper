@@ -3,20 +3,20 @@
 
 return [
 
-    'add_new' =>'Add new',
-    'show' =>"Show",
-    'delete'=>"Delete",
-    'edit'=>"Edit",
-    "dashboard"=>"Dashboard",
-    'hi'=>"Hi",
-    'data'    =>'Data',
+    'add_new' => 'Add new',
+    'show' => "Show",
+    'delete' => "Delete",
+    'edit' => "Edit",
+    "dashboard" => "Dashboard",
+    'hi' => "Hi",
+    'data'    => 'Data',
     'locales' => 'Locales',
-    'ar'      =>'العربيه',
-    'en'      =>'English ',
+    'ar'      => 'العربيه',
+    'en'      => 'English ',
     'save'    => 'Save',
 
     'nav' => [
-        'hi' => 'Hi' ,
+        'hi' => 'Hi',
     ],
 
     'aside' => [
@@ -28,6 +28,9 @@ return [
         'invoices'  => 'Invoices',
         'product'  => 'Products',
         'create_product'  => 'create Products',
+        'jobs' => "Jobs",
+        'applications' => "Applications",
+
     ],
-  'marwan'=>'Marawn Teck',
+    'marwan' => 'Marawn Teck',
 ];
