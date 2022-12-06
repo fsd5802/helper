@@ -32,7 +32,7 @@ class ApplicationController extends Controller
                 'name' => "required",
                 'email' => "required|email",
                 'phone' => "required|numeric",
-                'cv' => "required",
+                'cv' => "required|mimes:pdf",
             ],
             [
                 'name.required' => trans("custom_validation.name_req"),
@@ -45,10 +45,10 @@ class ApplicationController extends Controller
         $data=$request->all();
 
         if ($request->hasFile('cv')) {
-            $file = $request->file('cv'); 
+            $file = $request->file('cv');
             $data['cv']=$request->cv->store('Documents');
-            $file->move('Documents',$data['cv']);    
-        } 
+            $file->move('Documents',$data['cv']);
+        }
         Application::create($data);
 
         return redirect()->back()->with('success', trans('messages.success'));

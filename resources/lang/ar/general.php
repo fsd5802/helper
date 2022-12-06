@@ -31,4 +31,5 @@ return [
 
   ],
   'marwan'=>"مروان تك",
+    'go_to_application' => 'إملأ الإستمارة',
 ];

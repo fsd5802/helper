@@ -85,7 +85,7 @@ class InvoiceFrontController extends Controller
          $data_two = array(
             "apiOperation" => "UPDATE_SESSION",
             "order" => array (
-                "currency" => "EGP" ,
+                "currency" => "USD" ,
                 // "id" => '11'.$last_invoice->id,
                 "amount" => $last_invoice->price
             ),
@@ -201,7 +201,7 @@ class InvoiceFrontController extends Controller
                 $data_five = array(
                     "apiOperation" => "PAY",
                     "order" => array (
-                        "currency" => "EGP",
+                        "currency" => "USD",
                         "amount" => $invoice->price
                         ),
                     "session" => array (

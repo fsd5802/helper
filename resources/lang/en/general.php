@@ -33,4 +33,5 @@ return [
 
     ],
     'marwan' => 'Marawn Teck',
+    'go_to_application' => 'Fill application',
 ];

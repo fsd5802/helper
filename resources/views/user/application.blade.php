@@ -47,19 +47,19 @@
                                             @enderror
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for=""> @lang('application.cv')</label>
-                                            <input class="form-control @error('cv') is-invalid @enderror" type="file" name="cv" value="{{ old('cv') }}">
-                                            @error('email')
+                                            <input class="form-control @error('cv') is-invalid @enderror" type="file" name="cv" accept="application/pdf" value="{{ old('cv') }}">
+                                            @error('cv')
                                             <span class="text-danger">{{ $message }}</span>
                                             @enderror
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12 text-center">
-                                            
+
                                             <button class="btn btn-primary" type="submit">@lang('application.send')</button>
                                     </div>
 
