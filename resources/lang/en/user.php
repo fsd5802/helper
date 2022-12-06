@@ -23,6 +23,7 @@ return [
       'plans'=>'Plans & Prices',
       'blogs'=>"Blogs",
       'jobs'=>"Our jobs",
+      
     ],
     'about'=>[
        'sales'=>'Increase in Sales',

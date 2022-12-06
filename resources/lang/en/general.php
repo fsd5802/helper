@@ -14,6 +14,7 @@ return [
     'ar'      => 'العربيه',
     'en'      => 'English ',
     'save'    => 'Save',
+    'go_to_application'         => 'Apply',
 
     'nav' => [
         'hi' => 'Hi',

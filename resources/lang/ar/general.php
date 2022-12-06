@@ -14,6 +14,7 @@ return [
     'ar'      => ' العربية',
     'en'      => 'Englsih',
     'save'    =>  'حفظ',
+    'got_to_application' => 'تقديم',
 
   'aside' => [
       'home' => 'الرئيسية',

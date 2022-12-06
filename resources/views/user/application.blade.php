@@ -3,7 +3,7 @@
    Application
 @endsection
 @section('content')
-    @include('user.includes.header' , ['header_name' => __('user.header.services') , 'link_name' => 'services' ])
+    @include('user.includes.header' , ['header_name' => __('user.header.application') , 'link_name' => 'application' ])
 
     <section class="str-feature-section str-feature-section-page">
         <div class="container">
@@ -14,7 +14,7 @@
                         <!--form-->
                         <div class="checkout-form">
                             <div class="title">
-                                <h4>معلومات المتقدم</h4>
+                                <h4>@lang('application.applicant_info')</h4>
                             </div>
                             <form action="{{getRoute('jobs.apply',['job_id'=>$job_id])}}" method="POST" enctype="multipart/form-data">
                                 @csrf

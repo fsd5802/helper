@@ -22,6 +22,7 @@ return [
       'contactus' =>"تواصل معنا",
       'blogs'=>"المقالات",
       'plans'=>'الخطط والاسعار',
+      'application ' => 'نموذج التقديم'
       
     ],
     'about'=>[
@@ -67,5 +68,6 @@ return [
    'pupolar_tags'=>"العلامات الشائعه",
    'category'=>'الفئات',
    'try_now'=>'جرب الان',
+
   ],
 ];
