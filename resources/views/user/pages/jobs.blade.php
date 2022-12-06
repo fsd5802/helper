@@ -24,7 +24,7 @@
                                         <div class="str-feature-text str-headline">
                                             <h3>{{ $job->name }}</h3>
                                             <div class="str-feature-list ul-li-block">
-                                              <p>{{$job->skills}}}</p>
+                                              <p>{{$job->skills}}</p>
                                             </div>
                                         </div>
                                     </div>
