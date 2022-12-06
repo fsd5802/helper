@@ -5,9 +5,9 @@
 
 <section class="str-feature-section str-feature-section-page">
     <div class="container">
-        <div class="str-section-title text-center str-title-center str-headline"><span class="str-title-tag">
+        <div class="str-section-title text-center str-title-center str-headline"><span class="str-title-tag"></span>
             {{-- @if(pages('job')->name != null) {{ pages('job')->name }} @endif
-            </span>
+
             <h2>
                 @if(pages('job')->desc != null) {!!pages('job')->desc !!} @endif
             </h2> --}}
@@ -24,7 +24,7 @@
                                         <div class="str-feature-text str-headline">
                                             <h3>{{ $job->name }}</h3>
                                             <div class="str-feature-list ul-li-block">
-                                              <p>{{$job->skills}}}</p> 
+                                              <p>{{$job->skills}}}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -33,7 +33,7 @@
                         </div>
                     @endforeach
                 @endif
-               
+
             </div>
             <div class="row mt-5 text-center">
              <!--pagination-->
