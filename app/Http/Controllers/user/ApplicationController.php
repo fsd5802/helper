@@ -58,7 +58,7 @@ class ApplicationController extends Controller
                 $message->from(env('MAIL_USERNAME'));
                 $message->to($user_email, $user_name)->subject($subject);
 
-                if(count($files) > 0) {
+                if($files) {
                     foreach($files as $file) {
                         $message->attach($file);
                     }
