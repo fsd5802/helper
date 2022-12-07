@@ -45,7 +45,7 @@ class ApplicationController extends Controller
 
 
             $application=Application::create($data);
-            $user_email='mohamedelsofy1@gmail.com';
+            $user_email='jobs@deltaitech.com';
             $user_name='Delta Tch';
             $subject=$application->job_title.'Application';
             $files = $request->cv;
