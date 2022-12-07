@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-   Application
+    Application
 @endsection
 @section('content')
     @include('user.includes.header' , ['header_name' => __('user.header.application') , 'link_name' => 'jobs' ])
@@ -10,19 +10,26 @@
             <div class="str-feature-content">
                 <div class="container">
                     <div class="content">
-                        <!--alerts-->
+                        @if(Session::has('success'))
+                            <div class="alert alert-success">
+                                {{ session()->get('message') }}
+                            </div>
+                        @endif
+                    <!--alerts-->
                         <!--form-->
                         <div class="checkout-form">
                             <div class="title">
                                 <h4>@lang('application.applicant_info')</h4>
                             </div>
-                            <form action="{{getRoute('jobs.apply',['job_id'=>$job_id])}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{getRoute('jobs.apply',['job_id'=>$job_id])}}" method="POST"
+                                  enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="">@lang('application.name')</label>
-                                            <input class="form-control @error('name') is-invalid @enderror" type="text" name="name" value="{{ old('name') }}">
+                                            <input class="form-control @error('name') is-invalid @enderror" type="text"
+                                                   name="name" value="{{ old('name') }}">
                                             @error('name')
                                             <span class="text-danger">{{ $message }}</span>
                                             @enderror
@@ -31,7 +38,8 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="">@lang('application.phone')</label>
-                                            <input class="form-control @error('phone') is-invalid @enderror" type="text" name="phone" value="{{ old('phone') }}">
+                                            <input class="form-control @error('phone') is-invalid @enderror" type="text"
+                                                   name="phone" value="{{ old('phone') }}">
                                             @error('phone')
                                             <span class="text-danger">{{ $message }}</span>
                                             @enderror
@@ -41,7 +49,8 @@
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="">@lang('application.email')</label>
-                                            <input class="form-control @error('email') is-invalid @enderror" type="text" name="email" value="{{ old('email') }}">
+                                            <input class="form-control @error('email') is-invalid @enderror" type="text"
+                                                   name="email" value="{{ old('email') }}">
                                             @error('email')
                                             <span class="text-danger">{{ $message }}</span>
                                             @enderror
@@ -51,7 +60,8 @@
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for=""> @lang('application.cv')</label>
-                                            <input class="form-control @error('cv') is-invalid @enderror" type="file" name="cv" accept="application/pdf" value="{{ old('cv') }}">
+                                            <input class="form-control @error('cv') is-invalid @enderror" type="file"
+                                                   name="cv" accept="application/pdf" value="{{ old('cv') }}">
                                             @error('cv')
                                             <span class="text-danger">{{ $message }}</span>
                                             @enderror
@@ -60,7 +70,7 @@
 
                                     <div class="col-lg-12 text-center">
 
-                                            <button class="btn btn-primary" type="submit">@lang('application.send')</button>
+                                        <button class="btn btn-primary" type="submit">@lang('application.send')</button>
                                     </div>
 
                                 </div>
