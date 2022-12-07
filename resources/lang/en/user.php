@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 return [
     'home' =>"Home",
@@ -23,7 +23,7 @@ return [
       'plans'=>'Plans & Prices',
       'blogs'=>"Blogs",
       'jobs'=>"Our jobs",
-      
+        'application' =>'Application',
     ],
     'about'=>[
        'sales'=>'Increase in Sales',
@@ -57,7 +57,7 @@ return [
       'phone_num'=>'Telephone number',
       'office_Address'=>'Office address',
       'mail'=>'Mail address'
-  ], 
+  ],
   'helper'=>[
     'share'=>'Share:',
     'tags'=>'Tags:',

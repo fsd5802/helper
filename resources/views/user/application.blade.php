@@ -3,7 +3,7 @@
    Application
 @endsection
 @section('content')
-    @include('user.includes.header' , ['header_name' => __('user.header.application') , 'link_name' => 'application' ])
+    @include('user.includes.header' , ['header_name' => __('user.header.application') , 'link_name' => 'jobs' ])
 
     <section class="str-feature-section str-feature-section-page">
         <div class="container">
