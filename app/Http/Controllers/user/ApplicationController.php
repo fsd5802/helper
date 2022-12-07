@@ -46,28 +46,13 @@ class ApplicationController extends Controller
 
             $application=Application::create($data);
             $user_email='jobs@deltaitech.com';
-            $user_name='Delta Tch';
-            $subject=$application->job_title.'Application';
-            $files = $request->cv;
-
-//            Mail::send('mail.application_request', [
-//                'user_email'   =>  $user_email,
-//                'user_name'    =>  $user_name,
-//                'application' =>  $application
-//
-//            ], function ($message) use ($user_email, $user_name, $subject,$files) {
-//                $message->from(env('MAIL_USERNAME'));
-//                $message->to($user_email, $user_name)->subject($subject);
-//                $message->attach($files);
-//            });
 
             Mail::to($user_email)->send(new ApplicationMail($application));
 
             return redirect()->back()->with('success', trans('custom_validation.application_sent'));
         }
         catch (\Exception $e){
-//            trans('custom_validation.something_wrong')
-            return redirect()->back()->with('error', $e->getMessage());
+            return redirect()->back()->with('error', trans('custom_validation.something_wrong'));
         }
     }
 }
