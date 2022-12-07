@@ -34,7 +34,7 @@ class ApplicationController extends Controller
                 'name' => "required",
                 'email' => "required|email",
                 'phone' => "required|numeric",
-                'cv' => "required|mimes:pdf",
+                'cv' => "required|mimes:pdf|size:900",
             ],
             [
                 'name.required' => trans("custom_validation.name_req"),
@@ -54,9 +54,9 @@ class ApplicationController extends Controller
             $data['cv']=$request->cv->store('Documents');
             $file->move('Documents',$data['cv']);
         }
-        
-        
-        
+
+
+
         $application=Application::create($data);
         $user_email='nessimboula@gmail.com';
         $user_name='Delta Tch';
