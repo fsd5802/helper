@@ -126,13 +126,13 @@ a[x-apple-data-detectors] {
                       <td align="left" style="padding:0;Margin:0;padding-bottom:20px;padding-left:20px;padding-right:20px">
                       <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;border-color:#eee;width:100%" cellspacing="1" cellpadding="1" border="0" align="left" class="cke_show_border" role="presentation">
                         <tr style="border-collapse:collapse">
-                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Applicant name: {{$application->name}}</strong></td>
+                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Applicant name: {{$application['name']}}</strong></td>
                         </tr>
                         <tr style="border-collapse:collapse">
-                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Applicant phone: {{$application->phone}}</strong></td>
+                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Applicant phone: {{$application['phone']}}</strong></td>
                         </tr>
                         <tr style="border-collapse:collapse">
-                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Applicant email: {{$application->email}}</strong></td>
+                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Applicant email: {{$application['email']}}</strong></td>
                         </tr>
                         {{-- <tr style="border-collapse:collapse">
                           <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Number of adults:</strong></td>
