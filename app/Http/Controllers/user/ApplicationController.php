@@ -30,33 +30,38 @@ class ApplicationController extends Controller
 
     public function apply(ApplicationRequest $request)
     {
-        $data=$request->all();
-        $job=Job::findorfail($data['job_id']);
-        $data['job_title']=$job->name;
+        try {
+            $data=$request->all();
+            $job=Job::findorfail($data['job_id']);
+            $data['job_title']=$job->name;
 
-        if ($request->hasFile('cv')) {
-            $file = $request->file('cv');
-            $data['cv']=$request->cv->store('Documents');
-            $file->move('Documents',$data['cv']);
+            if ($request->hasFile('cv')) {
+                $file = $request->file('cv');
+                $data['cv']=$request->cv->store('Documents');
+                $file->move('Documents',$data['cv']);
+            }
+
+
+
+            $application=Application::create($data);
+            $user_email='nessimboula@gmail.com';
+            $user_name='Delta Tch';
+            $subject=$application->job_title.'Application';
+
+            Mail::send('mail.application_request', [
+                'user_email'   =>  $user_email,
+                'user_name'    =>  $user_name,
+                'application' =>  $application
+
+            ], function ($message) use ($user_email, $user_name, $subject) {
+                $message->from(env('MAIL_USERNAME'));
+                $message->to($user_email, $user_name)->subject($subject);
+            });
+
+            return redirect()->back()->with('success', trans('custom_validation.application_sent'));
         }
-
-
-
-        $application=Application::create($data);
-        $user_email='nessimboula@gmail.com';
-        $user_name='Delta Tch';
-        $subject=$application->job_title.'Application';
-
-        Mail::send('mail.application_request', [
-            'user_email'   =>  $user_email,
-            'user_name'    =>  $user_name,
-            'application' =>  $application
-
-        ], function ($message) use ($user_email, $user_name, $subject) {
-            $message->from(env('MAIL_USERNAME'));
-            $message->to($user_email, $user_name)->subject($subject);
-        });
-
-        return redirect()->back()->with('success', trans('custom_validation.application_sent'));
+        catch (\Exception $e){
+            return redirect()->back()->with('error', trans('custom_validation.something_wrong'));
+        }
     }
 }

@@ -21,4 +21,5 @@ return [
     'skills_req' => "The kills field is required",
     'cv_req' => "CV File",
     'application_sent' => "تم إرسال نموذج التقديم بنجاح",
+    'something_wrong' => "يوجد خطأ ما!",
 ];

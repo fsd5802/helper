@@ -21,4 +21,5 @@ return [
    'skills_req'=>'المهارات مطلوبة',
     'cv_req'=>"ملف السيرة الذاتية",
     'application_sent'=>"Application sent Successfully",
+    'something_wrong'=>"Something went wrong!",
 ];
