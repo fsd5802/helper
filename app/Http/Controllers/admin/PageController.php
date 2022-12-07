@@ -79,7 +79,6 @@ class PageController extends Controller
     {
         $page  =  Page::where('identifier',$request->identifier)->first();
         $data =$request->all();
-        dd($data);
         if( $page != null)
         {
             $page->fill($data)->save();

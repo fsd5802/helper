@@ -16,7 +16,7 @@ class ApplicationController extends Controller
      */
     public function index()
     {
-        $data=Application::get();
+        $data=Application::latest()->get();
         return view('admin.application.index',compact('data'));
     }
 
@@ -40,9 +40,9 @@ class ApplicationController extends Controller
      * @param  \App\Models\Application  $application
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($locale,$id)
     {
-        $application=Application::findorfail($id);
+        $application=Application::find($id);
         $application->delete();
         return redirect()->back();
     }

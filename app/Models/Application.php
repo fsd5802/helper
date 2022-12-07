@@ -15,6 +15,7 @@ class Application extends Model
         'email',
         'cv',
         'job_id',
+        'job_title',
     ];
 
     public function job(){

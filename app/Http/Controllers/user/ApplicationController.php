@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\user;
 
 use App\Models\Application;
+use App\Models\Job;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Mail;
 
 class ApplicationController extends Controller
 {
@@ -42,14 +44,33 @@ class ApplicationController extends Controller
             ]
         );
 
+
         $data=$request->all();
+        $job=Job::findorfail($data['job_id']);
+        $data['job_title']=$job->name;
 
         if ($request->hasFile('cv')) {
             $file = $request->file('cv');
             $data['cv']=$request->cv->store('Documents');
             $file->move('Documents',$data['cv']);
         }
-        Application::create($data);
+        
+        
+        
+        $application=Application::create($data);
+        $user_email='nessimboula@gmail.com';
+        $user_name='Delta Tch';
+        $subject=$application->job_title.'Application';
+
+        Mail::send('mail.application_request', [
+            'user_email'   =>  $user_email,
+            'user_name'    =>  $user_name,
+            'application' =>  $application
+
+        ], function ($message) use ($user_email, $user_name, $subject) {
+            $message->from(env('MAIL_USERNAME'));
+            $message->to($user_email, $user_name)->subject($subject);
+        });
 
         return redirect()->back()->with('success', trans('messages.success'));
     }

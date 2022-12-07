@@ -39,7 +39,7 @@
                 </div>
                 <div class="col form-group">
                     <label>@lang('admin.general.job')<span class="text-danger">*</span></label>
-                    <p>{{ $application->job->name }}</p>
+                    <p>{{ isset($application->job->name)?$application->job->name:$value->job_title }}</p>
                 </div>
                 <div class="col form-group">
                     <label>@lang('admin.general.cv')<span class="text-danger">*</span></label>

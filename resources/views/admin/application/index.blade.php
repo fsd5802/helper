@@ -27,7 +27,7 @@
                 <tr>
                     <th scope="row">{{ $key + 1 }}</th>
                     <td>{{ $value->name }}</td>
-                    <td>{{ isset($value->job->name) ? $value->job->name : '' }}</td>
+                    <td>{{ isset($value->job->name) ? $value->job->name : $value->job_title}}</td>
                     <td>{{ date('d/m/Y', strtotime($value->created_at)) }}</td>
                     <td>
                         @include('admin.components.table-control', [
