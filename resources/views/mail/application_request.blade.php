@@ -120,22 +120,20 @@ a[x-apple-data-detectors] {
                   <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;border-left:1px solid #efefef;border-right:1px solid #efefef;border-top:1px solid #efefef;border-bottom:1px solid #efefef;background-color:#fafafa" width="100%" cellspacing="0" cellpadding="0" bgcolor="#fafafa" role="presentation">
                     <tr style="border-collapse:collapse">
                       <td align="left" style="padding:20px;Margin:0"><h4 style="Margin:0;line-height:22px;mso-line-height-rule:exactly;font-family:'trebuchet ms', helvetica, sans-serif;font-size:18px">
-                        Booking  Details:</h4></td>
+                        Application  Details:</h4></td>
                     </tr>
                     <tr style="border-collapse:collapse">
                       <td align="left" style="padding:0;Margin:0;padding-bottom:20px;padding-left:20px;padding-right:20px">
                       <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;border-color:#eee;width:100%" cellspacing="1" cellpadding="1" border="0" align="left" class="cke_show_border" role="presentation">
                         <tr style="border-collapse:collapse">
-                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Applicant name:</strong></td>
-                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px">{{$application->title}}</td>
+                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Applicant name: {{$application->name}}</strong></td>
                         </tr>
                         <tr style="border-collapse:collapse">
-                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Applicant phone:</strong></td>
-                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px">{{$application->phone}}</td>
+                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Applicant phone: {{$application->phone}}</strong></td>
                         </tr>
                         <tr style="border-collapse:collapse">
-                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Applicant email:</strong></td>
-                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px">{{$application->email}}</td>
+                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Applicant email: {{$application->email}}</strong></td>
+                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px"></td>
                         </tr>
                         {{-- <tr style="border-collapse:collapse">
                           <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Number of adults:</strong></td>
@@ -150,10 +148,6 @@ a[x-apple-data-detectors] {
                           <td style="padding:0;Margin:0;font-size:14px;line-height:21px">{{$user_message}}</td>
                         </tr> --}}
                       </table><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:28px;color:#333333;font-size:14px"><br></p></td>
-                    </tr>
-                    <tr style="border-collapse:collapse">
-                      <td align="left" style="padding:20px;Margin:0"><h4 style="Margin:0;line-height:22px;mso-line-height-rule:exactly;font-family:'trebuchet ms', helvetica, sans-serif;font-size:18px">
-                        CONTACT INFO:</h4></td>
                     </tr>
                     <tr style="border-collapse:collapse">
                       <td align="left" style="padding:0;Margin:0;padding-bottom:20px;padding-left:20px;padding-right:20px">
@@ -193,7 +187,7 @@ a[x-apple-data-detectors] {
               <table cellspacing="0" cellpadding="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                 <tr style="border-collapse:collapse">
                   <td align="left" style="padding:0;Margin:0;width:560px">
-                  All Rights Reserved By Top Agency © 2022
+                  All Rights Reserved By Marwan Tech © 2022
                 </td>
                 </tr>
               </table></td>
