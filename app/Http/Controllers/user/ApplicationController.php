@@ -60,10 +60,7 @@ class ApplicationController extends Controller
 
                 if(count($files) > 0) {
                     foreach($files as $file) {
-                        $message->attach($file->getRealPath(), array(
-                                'as' => $file->getClientOriginalName(), // If you want you can chnage original name to custom name
-                                'mime' => $file->getMimeType())
-                        );
+                        $message->attach($file);
                     }
                 }
             });
