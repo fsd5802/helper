@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\user;
 
+use App\Http\Requests\user\ApplicationRequest;
 use App\Models\Application;
 use App\Models\Job;
 use Illuminate\Http\Request;
@@ -27,24 +28,8 @@ class ApplicationController extends Controller
      }
 
 
-    public function apply(Request $request)
+    public function apply(ApplicationRequest $request)
     {
-        $request->validate(
-            [
-                'name' => "required",
-                'email' => "required|email",
-                'phone' => "required|numeric",
-                'cv' => "required|mimes:pdf|max:900",
-            ],
-            [
-                'name.required' => trans("custom_validation.name_req"),
-                'phone.required' => trans("custom_validation.phone_req"),
-                'email.required' => trans("custom_validation.email_req"),
-                'cv.required' => trans("custom_validation.cv_req"),
-            ]
-        );
-
-
         $data=$request->all();
         $job=Job::findorfail($data['job_id']);
         $data['job_title']=$job->name;
@@ -72,6 +57,6 @@ class ApplicationController extends Controller
             $message->to($user_email, $user_name)->subject($subject);
         });
 
-        return redirect()->back()->with('success', trans('messages.success'));
+        return redirect()->back()->with('success', trans('custom_validation.application_sent'));
     }
 }
