@@ -133,7 +133,6 @@ a[x-apple-data-detectors] {
                         </tr>
                         <tr style="border-collapse:collapse">
                           <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Applicant email: {{$application->email}}</strong></td>
-                          <td style="padding:0;Margin:0;font-size:14px;line-height:21px"></td>
                         </tr>
                         {{-- <tr style="border-collapse:collapse">
                           <td style="padding:0;Margin:0;font-size:14px;line-height:21px"><strong>Number of adults:</strong></td>
