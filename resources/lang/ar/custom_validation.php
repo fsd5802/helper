@@ -20,6 +20,7 @@ return [
    'price'=>"حقل السعر مطلوب",
    'skills_req'=>'المهارات مطلوبة',
     'cv_req'=>"ملف السيرة الذاتية",
-    'application_sent'=>"Application sent Successfully",
-    'something_wrong'=>"Something went wrong!",
+
+    'application_sent' => "تم إرسال نموذج التقديم بنجاح",
+    'something_wrong' => "يوجد خطأ ما!",
 ];

@@ -20,6 +20,6 @@ return [
     'price' => "The price field is required",
     'skills_req' => "The kills field is required",
     'cv_req' => "CV File",
-    'application_sent' => "تم إرسال نموذج التقديم بنجاح",
-    'something_wrong' => "يوجد خطأ ما!",
+    'application_sent'=>"Application sent Successfully",
+    'something_wrong'=>"Something went wrong!",
 ];
