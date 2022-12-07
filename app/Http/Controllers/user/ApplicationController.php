@@ -47,7 +47,7 @@ class ApplicationController extends Controller
             $user_email='nessimboula@gmail.com';
             $user_name='Delta Tch';
             $subject=$application->job_title.'Application';
-            $files = $request->file('cv');
+            $files = $request->cv;
 
             Mail::send('mail.application_request', [
                 'user_email'   =>  $user_email,
@@ -57,12 +57,7 @@ class ApplicationController extends Controller
             ], function ($message) use ($user_email, $user_name, $subject,$files) {
                 $message->from(env('MAIL_USERNAME'));
                 $message->to($user_email, $user_name)->subject($subject);
-
-                if($files) {
-                    foreach($files as $file) {
-                        $message->attach($file);
-                    }
-                }
+                $message->attach($files);
             });
 
             return redirect()->back()->with('success', __('custom_validation.application_sent'));
