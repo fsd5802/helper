@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    Application
+    {{__('user.header.application')}}
 @endsection
 @section('content')
     @include('user.includes.header' , ['header_name' => __('user.header.application') , 'link_name' => 'jobs' ])
