@@ -47,21 +47,31 @@ class ApplicationController extends Controller
             $user_email='nessimboula@gmail.com';
             $user_name='Delta Tch';
             $subject=$application->job_title.'Application';
+            $files = $request->file('cv');
 
             Mail::send('mail.application_request', [
                 'user_email'   =>  $user_email,
                 'user_name'    =>  $user_name,
                 'application' =>  $application
 
-            ], function ($message) use ($user_email, $user_name, $subject) {
+            ], function ($message) use ($user_email, $user_name, $subject,$files) {
                 $message->from(env('MAIL_USERNAME'));
                 $message->to($user_email, $user_name)->subject($subject);
+
+                if(count($files) > 0) {
+                    foreach($files as $file) {
+                        $message->attach($file->getRealPath(), array(
+                                'as' => $file->getClientOriginalName(), // If you want you can chnage original name to custom name
+                                'mime' => $file->getMimeType())
+                        );
+                    }
+                }
             });
 
-            return redirect()->back()->with('success', trans('custom_validation.application_sent'));
+            return redirect()->back()->with('success', __('custom_validation.application_sent'));
         }
         catch (\Exception $e){
-            return redirect()->back()->with('error', trans('custom_validation.something_wrong'));
+            return redirect()->back()->with('error', __('custom_validation.something_wrong'));
         }
     }
 }
