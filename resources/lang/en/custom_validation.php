@@ -19,5 +19,6 @@ return [
   'product_req'=>"The product field is required",
   'price'=>"The price field is required",
   'skills_req'=>"The kills field is required",
+  'cv_req'=>"CV File",
 
 ];
