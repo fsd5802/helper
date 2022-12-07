@@ -34,7 +34,7 @@ class ApplicationController extends Controller
                 'name' => "required",
                 'email' => "required|email",
                 'phone' => "required|numeric",
-                'cv' => "required|mimes:pdf|size:900",
+                'cv' => "required|mimes:pdf|max:900",
             ],
             [
                 'name.required' => trans("custom_validation.name_req"),
