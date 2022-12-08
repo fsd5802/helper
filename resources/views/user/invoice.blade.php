@@ -11,6 +11,17 @@
                 <div class="container">
                     <div class="content">
                         <!--alerts-->
+                        @if(Session::has('success'))
+                            <div class="alert alert-success text-center">
+                                {{ session()->get('success') }}
+                            </div>
+                        @endif
+
+                        @if(Session::has('error'))
+                            <div class="alert alert-danger text-center">
+                                {{ session()->get('error') }}
+                            </div>
+                    @endif
                         <!--form-->
                         <div class="checkout-form">
                             <div class="title">

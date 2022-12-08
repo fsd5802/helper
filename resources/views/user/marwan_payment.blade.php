@@ -16,6 +16,19 @@
     <section dir="ltr">
         <div class="container">
             <div class="row">
+                @if(Session::has('success'))
+                    <div class="alert alert-success text-center">
+                        {{ session()->get('success') }}
+                    </div>
+                @endif
+
+                @if(Session::has('error'))
+                    <div class="alert alert-danger text-center">
+                        {{ session()->get('error') }}
+                    </div>
+                @endif
+            </div>
+            <div class="row">
                 <div class="col-12">
                     <div class="alert alert-danger alert-dismissible fade mt-5 d-none" role="alert" id="divError">
                         <h1>Validation Errors</h1>

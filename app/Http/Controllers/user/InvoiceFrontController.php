@@ -110,7 +110,7 @@ class InvoiceFrontController extends Controller
 
             return view('user.marwan_payment', compact('seeion_id', 'last_invoice'));
         } catch (\Exception $e) {
-            return redirect()->back()->with(['error', 'يوجد خطأ']);
+            return redirect()->back()->with(['error', __('custom_validation.something_wrong')]);
         }
     }
 
@@ -250,11 +250,11 @@ class InvoiceFrontController extends Controller
             if (isset($result5decode['result']) && $result5decode['result'] == "SUCCESS") {
                 return redirect()->route('success_invoice', ['ar', $invoice->id]);
             } else {
-                dd('pay error', $result5);
+//                dd('pay error', $result5);
                 return redirect()->route('cancel_invoice', ['ar', $invoice->id]);
             }
         } catch (\Exception $e) {
-            return redirect()->back()->with(['error', 'يوجد خطأ']);
+            return redirect()->back()->with(['error', __('custom_validation.something_wrong')]);
         }
     }
 
