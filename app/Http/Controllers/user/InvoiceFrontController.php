@@ -63,7 +63,7 @@ class InvoiceFrontController extends Controller
 //        $password='c622b7e9e550292df400be7d3e846476';
         $password='21aaeea3f3a99f36191b7274cdeecb37';
 //        $url = 'https://test-nbe.gateway.mastercard.com/api/rest/version/63/merchant/TESTEGPTEST/session';
-        $url = ': https://nbe.gateway.mastercard.com/api/rest/version/63/merchant/MARWANGROUP/session';
+        $url = ': https://nbe.gateway.mastercard.com/api/rest/version/63/merchant/TESTEGPTEST/session';
         $data = array(
             "session" => array ( "authenticationLimit"=> 25)
             );
