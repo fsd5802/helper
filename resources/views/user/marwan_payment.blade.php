@@ -6,7 +6,7 @@
     @include('user.includes.header' , ['header_name' => __('user.header.services') , 'link_name' => 'services' ])
     @push('css')
         <!-- INCLUDE SESSION.JS JAVASCRIPT LIBRARY -->
-        <script src="https://test-nbe.gateway.mastercard.com/form/version/63/merchant/TESTEGPTEST/session.js"></script>
+        <script src="https://nbe.gateway.mastercard.com/form/version/63/merchant/MARWANGROUP/session.js"></script>
         <!-- APPLY CLICK-JACKING STYLING AND HIDE CONTENTS OF THE PAGE -->
         <style id="antiClickjack">body {
                 display: none !important;
