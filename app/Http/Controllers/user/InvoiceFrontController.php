@@ -59,11 +59,11 @@ class InvoiceFrontController extends Controller
         $data=$request->all();
         $last_invoice = Invoice::create($data);
 //        $username='merchant.TESTEGPTEST';
-        $username='MARWANGROUP';
+        $username='merchant.MARWANGROUP';
 //        $password='c622b7e9e550292df400be7d3e846476';
         $password='21aaeea3f3a99f36191b7274cdeecb37';
 //        $url = 'https://test-nbe.gateway.mastercard.com/api/rest/version/63/merchant/TESTEGPTEST/session';
-        $url = ': https://nbe.gateway.mastercard.com/api/rest/version/63/merchant/TESTEGPTEST/session';
+        $url = ': https://nbe.gateway.mastercard.com/api/rest/version/63/merchant/MARWANGROUP/session';
         $data = array(
             "session" => array ( "authenticationLimit"=> 25)
             );
