@@ -197,7 +197,7 @@ class InvoiceFrontController extends Controller
             if (isset($result4decode['authentication'])) {
                 $transaction_id = $result4decode['authentication']['3ds']['transactionId'];
             } else {
-                    dd($result4);
+                    dd($result4.'4');
                 return redirect()->route('cancel_invoice', ['ar', $invoice->id]);
             }
 
