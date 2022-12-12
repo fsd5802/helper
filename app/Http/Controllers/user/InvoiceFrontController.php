@@ -206,7 +206,7 @@ class InvoiceFrontController extends Controller
 
             // //Pay
 //                $payUrl = 'https://test-nbe.gateway.mastercard.com/api/rest/version/63/merchant/TESTEGPTEST/order/'.$invoice->id.'/transaction/1';
-            $payUrl = 'https://nbe.gateway.mastercard.com/api/rest/version/63/merchant/MARWANGROUP/order/' . $invoice->id . '/transaction/1';
+            $payUrl = 'https://nbe.gateway.mastercard.com/api/rest/version/63/merchant/MARWANGROUP/order/' . $invoice->id . '/transaction/2';
 
             $data_five = array(
                 "apiOperation" => "PAY",
