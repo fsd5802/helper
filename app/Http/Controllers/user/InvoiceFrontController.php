@@ -125,7 +125,7 @@ class InvoiceFrontController extends Controller
 //        $password='c622b7e9e550292df400be7d3e846476';
             $password = '21aaeea3f3a99f36191b7274cdeecb37';
 //        $authUrl = 'https://test-nbe.gateway.mastercard.com/api/rest/version/63/merchant/TESTEGPTEST/order/11'.$invoice->id.'/transaction/1';
-            $authUrl = 'https://nbe.gateway.mastercard.com/api/rest/version/63/merchant/MARWANGROUP/order/11' . $invoice->id . '/transaction/1';
+            $authUrl = 'https://nbe.gateway.mastercard.com/api/rest/version/63/merchant/MARWANGROUP/order/11' . $invoice->id . '/transaction/txn-150';
 
             $data_three = array(
                 "apiOperation" => "INITIATE_AUTHENTICATION",
@@ -206,7 +206,7 @@ class InvoiceFrontController extends Controller
 
             // //Pay
 //                $payUrl = 'https://test-nbe.gateway.mastercard.com/api/rest/version/63/merchant/TESTEGPTEST/order/'.$invoice->id.'/transaction/1';
-            $payUrl = 'https://nbe.gateway.mastercard.com/api/rest/version/63/merchant/MARWANGROUP/order/' . $invoice->id . '/transaction/2';
+            $payUrl = 'https://nbe.gateway.mastercard.com/api/rest/version/63/merchant/MARWANGROUP/order/' . $invoice->id . '/transaction/txn-151';
 
             $data_five = array(
                 "apiOperation" => "PAY",
