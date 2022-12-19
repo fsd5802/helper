@@ -42,7 +42,7 @@ class InvoiceFrontController extends Controller
     public function store(Request $request)
     {
         try {
-            $request->validate([
+            $validation = $request->validate([
                 'name' => "required",
                 'email' => "required|email",
                 'phone' => "required|numeric",
@@ -56,6 +56,8 @@ class InvoiceFrontController extends Controller
 //                'product_id.required' => trans("custom_validation.product_req"),
                     'price.required' => trans("custom_validation.msg_req"),
                 ]);
+            if ($validation->fails())
+                return redirect()->back()->with('eeror',$validation->errors());
 
             $data = $request->all();
             $last_invoice = Invoice::create($data);

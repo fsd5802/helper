@@ -5,6 +5,16 @@
 @section('content')
     @include('user.includes.header' , ['header_name' => __('user.header.services') , 'link_name' => 'services' ])
 
+    @if ($errors->any())
+        <div class="alert alert-danger text-center">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <section class="str-feature-section str-feature-section-page">
         <div class="container">
             <div class="str-feature-content">
