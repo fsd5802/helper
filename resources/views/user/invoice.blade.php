@@ -5,15 +5,7 @@
 @section('content')
     @include('user.includes.header' , ['header_name' => __('user.header.services') , 'link_name' => 'services' ])
 
-    @if ($errors->any())
-        <div class="alert alert-danger text-center">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+
 
     <section class="str-feature-section str-feature-section-page">
         <div class="container">
@@ -31,8 +23,8 @@
                             <div class="alert alert-danger text-center">
                                 {{ session()->get('error') }}
                             </div>
-                    @endif
-                        <!--form-->
+                        @endif
+                    <!--form-->
                         <div class="checkout-form">
                             <div class="title">
                                 <h4>معلومات الدفع</h4>
@@ -70,7 +62,7 @@
                                                         <label for="">الكود *</label>
                                                         <input class="form-control @error('code') is-invalid @enderror"
                                                                type="text" name="code" value="{{ old('code') }}">
-                                                        @error('phone')
+                                                        @error('code')
                                                         <span class="text-danger">{{ $message }}</span>
                                                         @enderror
                                                     </div>
@@ -102,6 +94,9 @@
                                                         <input class="form-control @error('price') is-invalid @enderror"
                                                                type="number" min="0" step="0.01" name="price" id="price"
                                                                value="{{ old('price') }}">
+                                                        @error('price')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                        @enderror
                                                     </div>
                                                 </div>
 

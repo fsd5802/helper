@@ -7,6 +7,7 @@ use App\Models\Invoice;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\http\Requests\user\InvoiceRequest;
+use Illuminate\Support\Facades\Validator;
 
 
 class InvoiceFrontController extends Controller
@@ -42,22 +43,18 @@ class InvoiceFrontController extends Controller
     public function store(Request $request)
     {
         try {
-            $validation = $request->validate([
+            $validation = Validator::make($request->all(),[
                 'name' => "required",
                 'email' => "required|email",
                 'phone' => "required|numeric",
                 'code' => "required",
 //                'product_id' =>"required",
-                'price' => "required|numeric",],
-                [
-                    'name.required' => trans("custom_validation.name_req"),
-                    'phone.required' => trans("custom_validation.phone_req"),
-                    'email.required' => trans("custom_validation.email_req"),
-//                'product_id.required' => trans("custom_validation.product_req"),
-                    'price.required' => trans("custom_validation.msg_req"),
-                ]);
+                'price' => "required|numeric",]);
+
             if ($validation->fails())
-                return redirect()->back()->with('eeror',$validation->errors());
+            {
+                return redirect()->back()->withErrors($validation)->withInput();
+            }
 
             $data = $request->all();
             $last_invoice = Invoice::create($data);
