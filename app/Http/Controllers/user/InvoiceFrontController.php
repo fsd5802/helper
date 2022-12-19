@@ -46,6 +46,7 @@ class InvoiceFrontController extends Controller
                 'name' => "required",
                 'email' => "required|email",
                 'phone' => "required|numeric",
+                'code' => "required",
 //                'product_id' =>"required",
                 'price' => "required|numeric",],
                 [
@@ -197,7 +198,7 @@ class InvoiceFrontController extends Controller
             if (isset($result4decode['authentication'])) {
                 $transaction_id = $result4decode['authentication']['3ds']['transactionId'];
             } else {
-                    dd($result4.'4');
+//                    dd($result4.'4');
                 return redirect()->route('cancel_invoice', ['ar', $invoice->id]);
             }
 
@@ -250,7 +251,7 @@ class InvoiceFrontController extends Controller
             if (isset($result5decode['result']) && $result5decode['result'] == "SUCCESS") {
                 return redirect()->route('success_invoice', ['ar', $invoice->id]);
             } else {
-                dd('pay error', $result5);
+//                dd('pay error', $result5);
                 return redirect()->route('cancel_invoice', ['ar', $invoice->id]);
             }
         } catch (\Exception $e) {

@@ -34,7 +34,7 @@
                                             @endif
                                             @csrf
                                             <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-lg-4">
                                                     <div class="form-group">
                                                         <label for="">الاسم *</label>
                                                         <input class="form-control @error('name') is-invalid @enderror"
@@ -44,11 +44,22 @@
                                                         @enderror
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6">
+                                                <div class="col-lg-4">
                                                     <div class="form-group">
                                                         <label for="">الهاتف *</label>
                                                         <input class="form-control @error('phone') is-invalid @enderror"
                                                                type="text" name="phone" value="{{ old('phone') }}">
+                                                        @error('phone')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4">
+                                                    <div class="form-group">
+                                                        <label for="">الكود *</label>
+                                                        <input class="form-control @error('code') is-invalid @enderror"
+                                                               type="text" name="code" value="{{ old('code') }}">
                                                         @error('phone')
                                                         <span class="text-danger">{{ $message }}</span>
                                                         @enderror

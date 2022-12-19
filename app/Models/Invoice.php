@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Invoice extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','phone','email','product_id','price','status'];
+    protected $fillable = ['name','phone','email','product_id','price','status','code'];
 
     public function product(){
         return $this->belongsTo(Product::class, 'product_id');
