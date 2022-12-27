@@ -48,6 +48,9 @@ Route::group(['prefix' => '{locale}', 'middleware' => 'SwitchLanguage'], functio
     Route::get('service-request', 'App\Http\Controllers\user\ServiceController@serviceRequest')->name('service_request.index');
     Route::post('send-service-request', 'App\Http\Controllers\user\ServiceController@storeRequest')->name('service_request.store');
 
+    Route::get('quote-request', 'App\Http\Controllers\user\QuoteController@quoteRequest')->name('quote_request.index');
+    Route::post('send-quote-request', 'App\Http\Controllers\user\QuoteController@storeRequest')->name('quote_request.store');
+
     // //from jetstream
     // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     //     return view('dashboard');

@@ -7,6 +7,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 
 const REQUEST_SERVICE_MAIL = 'admin@app.com';
+const QUOTE_MAIL = 'admin@app.com';
 
 if (!function_exists('getRoute')) {
     function getRoute($route, $params = null)

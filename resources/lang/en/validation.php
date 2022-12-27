@@ -153,6 +153,7 @@ return [
 
     'attributes' => [
         'message' => 'Request Content',
+        'service_id' => 'Service',
     ],
 
 ];

@@ -24,6 +24,7 @@ return [
         'plans' => 'الخطط والاسعار',
         'application' => 'نموذج التقديم',
         'service_request' => 'طلب خدمة',
+        'quote_request' => 'طلب عرض أسعار',
 
     ],
     'about' => [

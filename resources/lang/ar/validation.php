@@ -220,6 +220,7 @@ return [
         'price' => 'السعر',
         'code' => 'الكود',
         'message' => 'محتوى الطلب',
+        'service_id' => 'الخدمة',
     ],
     'insurance_amount' => 'الحد التأميني',
 ];

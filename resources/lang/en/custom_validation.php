@@ -26,12 +26,18 @@ return [
 
 
     'mail_service_request' => "Service request from: ",
+    'mail_quote_request' => "Quotation request from: ",
     'service_details' => 'Service Details',
+    'quote_details' => 'Quotation Details',
     'service_request_title' => 'Please fill below form for your request.',
+    'quote_request_title' => 'Please fill below form for quotation request.',
     'name' => 'Name',
     'phone' => 'Phone',
     'email' => 'Email',
     'message' => 'Request Content',
-    'rights' => ' All Rights Reserved By Marwan Tech © 2022',
+    'rights' => 'All Rights Reserved By Marwan Tech © 2022',
+    'services' => 'Services',
+    'service_name' => 'Service Name',
+    'choose' => 'Please Choose ..',
 
 ];
