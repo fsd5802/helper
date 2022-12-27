@@ -664,7 +664,7 @@
                 {{-- end jobs  section --}}
 
                 {{-- start service requests  section --}}
-                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{{getRoute('service-requests.index')}}" class="menu-link">
                         <span class="svg-icon menu-icon">
                             <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
@@ -690,7 +690,7 @@
                 {{-- end service requests  section --}}
 
                 {{-- start quotation requests  section --}}
-                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{{getRoute('quotations.index')}}" class="menu-link">
                         <span class="svg-icon menu-icon">
                             <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->

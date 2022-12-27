@@ -28,9 +28,9 @@ class QuoteRequestController extends Controller
         //
     }
 
-    public function show($locale, QuoteRequest $quoteRequest)
+    public function show($locale, $id)
     {
-        return $quoteRequest;
+        $quoteRequest = QuoteRequest::find($id);
         try {
             return view('admin.quotation_requests.show', compact('quoteRequest'));
         } catch (\Exception $e) {

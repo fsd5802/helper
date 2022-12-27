@@ -31,7 +31,7 @@
             <div class="col form-group">
                 <label>{{__('custom_validation.service_name')}}<span class="text-danger">*</span></label>
 
-                <p>{{ $quoteRequest->service_id }}</p>
+                <p>{{ $quoteRequest->service->name }}</p>
             </div>
 
             <div class="col form-group">
