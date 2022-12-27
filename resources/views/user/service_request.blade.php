@@ -1,9 +1,9 @@
 @extends('layouts.master')
 @section('title')
-    {{__('user.header.application')}}
+    {{__('user.header.service_request')}}
 @endsection
 @section('content')
-    @include('user.includes.header' , ['header_name' => __('user.header.application') , 'link_name' => 'jobs' ])
+    @include('user.includes.header' , ['header_name' => __('user.header.service_request') , 'link_name' => 'service_request.index' ])
 
 
     <section class="str-feature-section str-feature-section-page">
@@ -26,11 +26,12 @@
                         <!--form-->
                         <div class="checkout-form">
                             <div class="title">
-                                <h4>@lang('application.applicant_info')</h4>
+                                <h4>{{__('custom_validation.service_request_title')}} <span class="text-danger">*</span></h4>
                             </div>
-                            <form action="{{getRoute('jobs.apply',['job_id'=>$job_id])}}" method="POST"
+                            <form action="{{getRoute('service_request.store')}}" method="POST"
                                   enctype="multipart/form-data">
                                 @csrf
+                                @method('post')
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
@@ -66,10 +67,9 @@
 
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <label for=""> @lang('application.cv')</label>
-                                            <input class="form-control @error('cv') is-invalid @enderror" type="file"
-                                                   name="cv" accept="application/pdf" value="{{ old('cv') }}">
-                                            @error('cv')
+                                            <label for="">{{__('custom_validation.message')}}</label>
+                                            <textarea id="message" name="message" class="form-control @error('message') is-invalid @enderror" placeholder="@lang("admin.general.body")" rows="5"></textarea>
+                                            @error('message')
                                             <span class="text-danger">{{ $message }}</span>
                                             @enderror
                                         </div>

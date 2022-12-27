@@ -45,7 +45,8 @@ Route::group(['prefix' => '{locale}', 'middleware' => 'SwitchLanguage'], functio
     Route::post('/jobs/application/store', [App\Http\Controllers\user\ApplicationController::class, 'apply'])->name("jobs.apply");
     Route::get('/application-form', [App\Http\Controllers\user\ApplicationController::class, 'applying_form'])->name("applying_form");
 
-
+    Route::get('service-request', 'App\Http\Controllers\user\ServiceController@serviceRequest')->name('service_request.index');
+    Route::post('send-service-request', 'App\Http\Controllers\user\ServiceController@storeRequest')->name('service_request.store');
 
     // //from jetstream
     // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -56,26 +57,26 @@ Route::group(['prefix' => '{locale}', 'middleware' => 'SwitchLanguage'], functio
     //test register
     // Route::post('/register' ,[App\Http\Controllers\Auth\RegisterController::class , 'handleRegister'] )->name("handleRegister");
 
-    Route::get('routes', function () {
-        $routeCollection = Route::getRoutes();
-
-        echo "<table style='width:100%'>";
-        echo "<tr>";
-        echo "<td width='10%'><h4>HTTP Method</h4></td>";
-        echo "<td width='10%'><h4>Route</h4></td>";
-        echo "<td width='10%'><h4>Name</h4></td>";
-        echo "<td width='70%'><h4>Corresponding Action</h4></td>";
-        echo "</tr>";
-        foreach ($routeCollection as $value) {
-            echo "<tr>";
-            echo "<td>" . $value->methods()[0] . "</td>";
-            echo "<td>" . $value->uri() . "</td>";
-            echo "<td>" . $value->getName() . "</td>";
-            echo "<td>" . $value->getActionName() . "</td>";
-            echo "</tr>";
-        }
-        echo "</table>";
-    });
+//    Route::get('routes', function () {
+//        $routeCollection = Route::getRoutes();
+//
+//        echo "<table style='width:100%'>";
+//        echo "<tr>";
+//        echo "<td width='10%'><h4>HTTP Method</h4></td>";
+//        echo "<td width='10%'><h4>Route</h4></td>";
+//        echo "<td width='10%'><h4>Name</h4></td>";
+//        echo "<td width='70%'><h4>Corresponding Action</h4></td>";
+//        echo "</tr>";
+//        foreach ($routeCollection as $value) {
+//            echo "<tr>";
+//            echo "<td>" . $value->methods()[0] . "</td>";
+//            echo "<td>" . $value->uri() . "</td>";
+//            echo "<td>" . $value->getName() . "</td>";
+//            echo "<td>" . $value->getActionName() . "</td>";
+//            echo "</tr>";
+//        }
+//        echo "</table>";
+//    });
 
     Route::get('/cancel_payment', [App\Http\Controllers\user\ProductController::class, 'cancel_payment'])->name("cancel_payment");
     Route::get('/success_payment', [App\Http\Controllers\user\ProductController::class, 'success_payment'])->name("success_payment");
@@ -91,8 +92,6 @@ Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'index']
 Route::get('/cancel/{id}', [App\Http\Controllers\user\ProductController::class, 'cancel'])->name("cancel");
 Route::get('/success/{id}', [App\Http\Controllers\user\ProductController::class, 'success'])->name("success");
 Route::post('/login-from', [App\Http\Controllers\Auth\LoginController::class, 'handleLogin'])->name('handleLogin');
-
-
 
 
 // Route::get('/logout' ,[App\Http\Controllers\Auth\LoginController::class , 'logout'] )->name("logout");

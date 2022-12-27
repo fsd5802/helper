@@ -24,6 +24,7 @@ return [
         'blogs' => "Blogs",
         'jobs' => "Our jobs",
         'application' => 'Application',
+        'service_request' => 'Service Request',
     ],
     'about' => [
         'sales' => 'Increase in Sales',

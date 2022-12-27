@@ -48,6 +48,7 @@
     <link rel="stylesheet" href="{{ asset("assets/user/css/vendor.min.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/user/css/style.min.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/user/css/over-style.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/user/css/custom.css") }}">
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

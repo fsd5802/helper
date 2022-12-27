@@ -20,6 +20,18 @@ return [
     'price' => "The price field is required",
     'skills_req' => "The kills field is required",
     'cv_req' => "CV File",
-    'application_sent'=>"Application sent Successfully",
-    'something_wrong'=>"Something went wrong!",
+    'application_sent' => "Application sent successfully",
+    'request_sent' => "Your request has been sent successfully",
+    'something_wrong' => "Something went wrong!",
+
+
+    'mail_service_request' => "Service request from: ",
+    'service_details' => 'Service Details',
+    'service_request_title' => 'Please fill below form for your request.',
+    'name' => 'Name',
+    'phone' => 'Phone',
+    'email' => 'Email',
+    'message' => 'Request Content',
+    'rights' => ' All Rights Reserved By Marwan Tech © 2022',
+
 ];
