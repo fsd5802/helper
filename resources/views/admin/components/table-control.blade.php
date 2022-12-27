@@ -6,7 +6,7 @@ btn-icon mr-2" title="@lang('general.show')">
     <i class="fa fa-eye"></i>
 </a>
 
-@if (!request()->routeIs('applications.*'))   
+@if (!request()->routeIs('applications.*','service-requests.*','quotations.*'))
 <a href="{{getRoute($name.'.edit',$value->id)}}" class="btn btn-sm btn-clean
 btn-icon mr-2 custimizeEditBtn" title="@lang('general.edit')">
     <i class="fa fa-edit"></i>

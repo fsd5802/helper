@@ -31,6 +31,8 @@ return [
         'create_product'  => 'create Products',
         'jobs' => "Jobs",
         'applications' => "Applications",
+        'service_requests'=>"Service Requests",
+        'quotation_requests'=>"Quotation Requests",
 
     ],
     'marwan' => 'Marawn Teck',

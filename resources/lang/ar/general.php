@@ -27,7 +27,8 @@ return [
       'invoices'  => 'الفواتير',
       'jobs' => "الوظائف",
       'applications' => "طلبات التوظيف",
-
+      'service_requests' => "طلبات الخدمات",
+      'quotation_requests' => "طلبات عرض الأسعار",
 
 
   ],
