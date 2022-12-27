@@ -36,6 +36,9 @@
                                 <li>
                                     <a href="{{ getRoute("service_request.index") }}">{{__('user.header.service_request')}} </a>
                                 </li>
+                                <li>
+                                    <a href="{{ getRoute("quote_request.index") }}">{{__('user.header.quote_request')}} </a>
+                                </li>
                                 <li><a href="{{ getRoute("getContactUs") }}"> @lang("user.navbar.contactus")</a></li>
                                 {{-- <li class="dropdown user"><a href="#"> <i class="fa fa-user"></i></a>
                                   <ul class="dropdown-menu clearfix">
@@ -84,6 +87,9 @@
                             <li><a href="{{ getRoute("plans") }}">@lang("user.navbar.ticketsupport") </a></li>
                             <li>
                                 <a href="{{ getRoute("service_request.index") }}">{{__('user.header.service_request')}} </a>
+                            </li>
+                            <li>
+                                <a href="{{ getRoute("quote_request.index") }}">{{__('user.header.quote_request')}} </a>
                             </li>
                             <li><a href="{{ getRoute("getContactUs") }}"> @lang("user.navbar.contactus")</a></li>
                         </ul>
