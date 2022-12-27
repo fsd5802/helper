@@ -30,6 +30,7 @@ class QuoteController extends Controller
             return redirect()->back()->with('success', trans('custom_validation.request_sent'));
         } catch (\Exception $e) {
             return redirect()->back()->with('error', trans('custom_validation.something_wrong'));
+//            return redirect()->back()->with('error', trans('custom_validation.something_wrong'));
         }
     }
 }
