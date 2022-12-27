@@ -22,7 +22,8 @@ class ServiceController extends Controller
             Mail::to(REQUEST_SERVICE_MAIL)->send(new ServiceRequestMail($service_request));
             return redirect()->back()->with('success', trans('custom_validation.request_sent'));
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', trans('custom_validation.something_wrong'));
+            return redirect()->back()->with('error', $e->getMessage());
+//            return redirect()->back()->with('error', trans('custom_validation.something_wrong'));
         }
     }
 }
