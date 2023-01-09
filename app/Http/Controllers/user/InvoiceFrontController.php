@@ -197,7 +197,7 @@ class InvoiceFrontController extends Controller
             if (isset($result4decode['authentication'])) {
                 $transaction_id = $result4decode['authentication']['3ds']['transactionId'];
             } else {
-//                    dd($result4.'4');
+                    dd($result4.'4');
                 return redirect()->route('cancel_invoice', ['ar', $invoice->id]);
             }
 
@@ -244,13 +244,13 @@ class InvoiceFrontController extends Controller
             $result5 = curl_exec($ch5);
 
             curl_close($ch5);
-//             dd($result5 );
+             dd($result5 );
             $result5;
             $result5decode = json_decode($result5, true);
             if (isset($result5decode['result']) && $result5decode['result'] == "SUCCESS") {
                 return redirect()->route('success_invoice', ['ar', $invoice->id]);
             } else {
-//                dd('pay error', $result5);
+                dd('pay error', $result5);
                 return redirect()->route('cancel_invoice', ['ar', $invoice->id]);
             }
         } catch (\Exception $e) {
