@@ -37,7 +37,7 @@ return [
         'aboutus' => "عن الشركه",
         'ourwork' => "اعمالنا",
         'services' => "الخدمات",
-        'jobs' => "الوظائف",
+        'jobs' => "التوظيف",
         'customers' => "عملائنا",
         'blogs' => "المقالات",
         'ticketsupport' => "الدعم الفني",
@@ -52,7 +52,7 @@ return [
     'read_more' => 'اقرا المزيد',
     'footer' => [
         'copyrights' => '  جميع الحقوق محفوظة ©',
-        'developed' => 'مروان تك',
+        'developed' => 'مروان جروب لتقنية المعلومات',
         'info' => 'المعلومات الرسميه:',
         'open_hours' => "ساعات العمل:",
         'news_letter' => "النشرة الإخبارية",

@@ -14,7 +14,7 @@
                         <div class="blog-feed-img-txt">
                             <div class="row">
                             <div class="col-lg-6 col-md-12 col-sm-12">
-                                <div class="saasio-blog-img"><img src="{{ asset($blog->image) }}" alt="{{ $blog->name }}"></div>
+                                <div class="saasio-blog-img"><img src="{{ asset($blog->image) }}" style="width: 100%;height: 225px;object-fit: cover;object-position: top;" alt="{{ $blog->name }}"></div>
                             </div>
                             <div class="col-lg-6 col-md-12 col-sm-12">
                                 <div class="saasio-blog-text">
@@ -29,7 +29,7 @@
                             </div>
                         </div>
                     </div>
-                 @endforeach    
+                 @endforeach
                 @endif
                 {{-- for pagination --}}
                 {{ $blogs->links('vendor.pagination.custom_user') }}

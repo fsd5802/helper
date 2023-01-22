@@ -51,7 +51,7 @@ return [
     'read_more' => 'Read More',
     'footer' => [
         'copyrights' => 'All rights reserved. © 2020  ',
-        'developed' => 'Marwan Tech',
+        'developed' => 'Marwan Group for Information Technology',
         'info' => 'Official info:',
         'open_hours' => "Open Hours:",
         'news_letter' => "Newsletter",

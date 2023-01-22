@@ -100,8 +100,15 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="col-lg-12 text-center">
-                                                    <button class="btn btn-primary" type="submit">ادفع</button>
+                                                <div class="col-lg-12">
+                                                    <div class="float-right">
+                                                        <button class="btn btn-primary" type="submit">ادفع</button>
+                                                    </div>
+                                                   <div class="float-left">
+                                                       <img src="{{asset("assets/masterCard.png")}}" style="width: 80px; height: 40px" />
+                                                       <img src="{{asset("assets/visa.webp")}}" style="width: 80px; height: 40px" />
+                                                       <img src="{{asset("assets/ssl.png")}}" style="width: 80px; height: 50px" />
+                                                   </div>
                                                 </div>
 
                                             </div>

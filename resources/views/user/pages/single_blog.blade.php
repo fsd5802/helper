@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="saasio-blog-details-content">
-                        <div class="blog-details-img"><img src="{{ asset($blog->image) }}" alt="{{ $blog->name }}">
+                        <div class="blog-details-img"><img src="{{ asset($blog->image) }}" style="width: 100%;height: 400px;object-fit: cover;object-position: top;" alt="{{ $blog->name }}">
                         </div>
                         <div class="blog-details-text dia-headline">
                             <h2>{{ $blog->name }}</h2>
@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <div class="blog-details-tag clearfix">
-                            <div class="blog-feed-tag float-left"> 
+                            <div class="blog-feed-tag float-left">
                                 <span>@lang('user.helper.tags') </span>
                                 <a href="#"> {{ \App\Models\Work::findorfail($blog->work_id)->name }}</a>
                             </div>
