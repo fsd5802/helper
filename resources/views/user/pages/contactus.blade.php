@@ -84,9 +84,11 @@
                                         <div class="form-group @error('g-recaptcha-response') is-invalid @enderror">
                                             {!! NoCaptcha::renderJs() !!}
                                             {!! NoCaptcha::display() !!}
-                                            @error('g-recaptcha-response')
-                                            <span class="text-danger">{{ $message }}</span>
-                                            @enderror
+                                            @if ($errors->has('g-recaptcha-response'))
+                                                <span class="help-block">
+                                                    <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                                </span>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
