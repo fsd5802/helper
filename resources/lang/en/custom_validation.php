@@ -36,6 +36,7 @@ return [
     'name' => 'Name',
     'phone' => 'Phone',
     'email' => 'Email',
+    'subject' => 'Subject',
     'message' => 'Request Content',
     'rights' => 'All Rights Reserved By Marwan Tech © 2022',
     'services' => 'Services',

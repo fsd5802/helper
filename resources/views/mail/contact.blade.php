@@ -547,8 +547,8 @@
                                                                     </tr>
                                                                     <tr style="border-collapse:collapse">
                                                                         <td style="padding:0;Margin:0;font-size:14px;line-height:21px">
-                                                                            <strong>{{__('custom_validation.service_name')}}
-                                                                                : {{$contact->address}}</strong>
+                                                                            <strong>{{__('custom_validation.subject')}}
+                                                                                : {{$contact->subject}}</strong>
                                                                         </td>
                                                                     </tr>
                                                                     <tr style="border-collapse:collapse">
