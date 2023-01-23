@@ -27,8 +27,10 @@ return [
 
     'mail_service_request' => "Service request from: ",
     'mail_quote_request' => "Quotation request from: ",
+    'mail_contact_request' => "Contact request from: ",
     'service_details' => 'Service Details',
     'quote_details' => 'Quotation Details',
+    'contact_details' => 'Contact Details',
     'service_request_title' => 'Please fill below form for your request.',
     'quote_request_title' => 'Please fill below form for quotation request.',
     'name' => 'Name',

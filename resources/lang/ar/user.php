@@ -25,6 +25,7 @@ return [
         'application' => 'نموذج التقديم',
         'service_request' => 'طلب خدمة',
         'quote_request' => 'طلب عرض أسعار',
+        'contact_request' => 'طلب إتصال',
 
     ],
     'about' => [

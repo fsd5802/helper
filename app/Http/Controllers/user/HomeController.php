@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use App\Models\Portfolio;
 use App\Models\Testmonial;
@@ -14,6 +15,7 @@ use App\Http\Requests\user\ContactRequest;
 use App\Models\Plan;
 use App\Models\Blog;
 use App\Models\Job;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -85,12 +87,12 @@ class HomeController extends Controller
     //save contact us messages into db;
     public function handleContactUs($locale, ContactRequest $request)
     {
-
-        $data = $request->all();
-        $contact = Contact::create($data);
-        if ($contact) {
+        try {
+            $data = $request->all();
+            $contact = Contact::create($data);
+            Mail::to(CONTACT_MAIL)->send(new ContactMail($contact));
             return response()->json(['success' => trans('user.success')]);
-        } else {
+        } catch (\Exception $e) {
             return response()->json(['error' => $validator->errors()->all()]);
         }
     }

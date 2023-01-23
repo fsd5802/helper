@@ -26,6 +26,7 @@ return [
         'application' => 'Application',
         'service_request' => 'Service Request',
         'quote_request' => 'Quotation Request',
+        'contact_request' => 'Contact Request',
     ],
     'about' => [
         'sales' => 'Increase in Sales',

@@ -27,8 +27,10 @@ return [
 
     'mail_service_request' => "طلب خدمة مقدم من: ",
     'mail_quote_request' => "طلب عرض سعر مقدم من: ",
+    'mail_contact_request' => "طلب اتصال مقدم من: ",
     'service_details' => "تفاصيل الخدمة",
     'quote_details' => "تفاصيل عرض السعر",
+    'contact_details' => "تفاصيل الإتصال",
     'service_request_title' => 'يرجى ملء النموذج أدناه لطلبك.',
     'quote_request_title' => 'يرجى ملء النموذج أدناه لطلب عرض السعر.',
     'name' => 'الإسم',
