@@ -81,7 +81,7 @@
 
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6">
-                                        <div class="form-group">
+                                        <div class="form-group @error('g-recaptcha-response') is-invalid @enderror">
                                             {!! NoCaptcha::renderJs() !!}
                                             {!! NoCaptcha::display() !!}
                                         </div>
