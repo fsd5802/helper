@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 const REQUEST_SERVICE_MAIL = 'requests@marwan.tech';
 const QUOTE_MAIL = 'requests@marwan.tech';
+const JOB_MAIL = 'jobs@marwan.tech';
 
 if (!function_exists('getRoute')) {
     function getRoute($route, $params = null)

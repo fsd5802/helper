@@ -47,7 +47,7 @@ class ApplicationController extends Controller
             $application = Application::create($data);
             $user_email = 'jobs@deltaitech.com';
 
-            Mail::to($user_email)->send(new ApplicationMail($application));
+            Mail::to(JOB_MAIL)->send(new ApplicationMail($application));
 
             return redirect()->back()->with('success', trans('custom_validation.application_sent'));
         } catch (\Exception $e) {
