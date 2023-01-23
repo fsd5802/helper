@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => (bool) env('APP_DEBUG', false),
+    'debug' => (bool)env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -81,10 +81,10 @@ return [
     */
     //default language
     'locale' => 'ar',
-        'supportedLocales' => [
-            'ar',
-            'en',
-        ],
+    'supportedLocales' => [
+        'ar',
+        'en',
+    ],
 
 
     /*
@@ -167,6 +167,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
         /*
          * Package Service Providers...
          */
@@ -182,6 +183,7 @@ return [
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
         Darryldecode\Cart\CartServiceProvider::class,
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
 
     ],
 
@@ -235,8 +237,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Cart' => Darryldecode\Cart\Facades\CartFacade::class
-
+        'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
+        'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
     ],
 
 ];
