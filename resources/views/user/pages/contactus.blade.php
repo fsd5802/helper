@@ -84,6 +84,9 @@
                                         <div class="form-group @error('g-recaptcha-response') is-invalid @enderror">
                                             {!! NoCaptcha::renderJs() !!}
                                             {!! NoCaptcha::display() !!}
+                                            @error('g-recaptcha-response')
+                                            <span class="text-danger">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
