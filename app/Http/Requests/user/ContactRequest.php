@@ -24,22 +24,24 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-        'name' =>"required",
-        'email' =>"required|email",
-        'phone' =>"required",
-        'subject' =>"required",
-        'message' =>"required",
+            'name' => "required",
+            'email' => "required|email",
+            'phone' => "required",
+            'subject' => "required",
+            'message' => "required",
+            'g-recaptcha-response' => 'required|captcha',
         ];
     }
+
     public function messages()
     {
-      return
-      [
-          'name.required' => trans("custom_validation.name_req"),
-          'subject.required' => trans("custom_validation.sub_req"),
-          'email.required' => trans("custom_validation.email_req"),
-          'phone.required' => trans("custom_validation.phone_req"),
-          'message.required' => trans("custom_validation.msg_req"),
-      ];
+        return
+            [
+                'name.required' => trans("custom_validation.name_req"),
+                'subject.required' => trans("custom_validation.sub_req"),
+                'email.required' => trans("custom_validation.email_req"),
+                'phone.required' => trans("custom_validation.phone_req"),
+                'message.required' => trans("custom_validation.msg_req"),
+            ];
     }
 }
