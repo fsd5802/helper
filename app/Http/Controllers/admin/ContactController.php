@@ -15,7 +15,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-       $data = Contact::paginate(paginationNumber());
+       $data = Contact::latest('id')->paginate(paginationNumber());
        return view("admin.contacts.index" , ['data'=>$data]);
     }
 
