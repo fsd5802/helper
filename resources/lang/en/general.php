@@ -33,6 +33,7 @@ return [
         'applications' => "Applications",
         'service_requests'=>"Service Requests",
         'quotation_requests'=>"Quotation Requests",
+        'contact_requests'=>"Contact Requests",
 
     ],
     'marwan' => 'Marawn Teck',

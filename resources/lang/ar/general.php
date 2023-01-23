@@ -29,6 +29,7 @@ return [
       'applications' => "طلبات التوظيف",
       'service_requests' => "طلبات الخدمات",
       'quotation_requests' => "طلبات عرض الأسعار",
+      'contact_requests' => "طلبات الإتصال",
 
 
   ],
