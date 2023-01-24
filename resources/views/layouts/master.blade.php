@@ -20,10 +20,10 @@
     <meta property="og:url" content="https://marwan.tech">
     <meta property="og:image" content="{{ asset(setting()->logo) }}">
 
-    <link rel="apple-touch-icon" href="{{ 'favicon.ico' }}">
+    <link rel="apple-touch-icon" href="{{ asset(setting()->logo) }}">
 
 
-    <link rel="icon" href="{{ 'favicon.ico' }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset(setting()->logo) }}" type="image/x-icon">
     <!--
     Add the code snippet above to the sites listed to display your badge:
     http://deltaitech.com
