@@ -80,16 +80,10 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-xs-12 col-sm-12 col-md-6">
-                                        <div class="form-group @error('g-recaptcha-response') is-invalid @enderror">
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
                                             {!! NoCaptcha::display() !!}
                                             {!! NoCaptcha::renderJs() !!}
-{{--                                            @if ($errors->has('g-recaptcha-response'))--}}
-{{--                                                <span class="help-block">--}}
-{{--                                                    <strong>{{ $errors->first('g-recaptcha-response') }}</strong>--}}
-{{--                                                </span>--}}
-{{--                                            @endif--}}
-
                                             <div id="Mcaptcha" class="err"></div>
                                         </div>
                                     </div>
