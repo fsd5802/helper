@@ -35,7 +35,7 @@ return [
     ],
     'navbar' => [
         'home' => "الرئيسية",
-        'aboutus' => "عن الشركه",
+        'aboutus' => "عن الشركة",
         'ourwork' => "اعمالنا",
         'services' => "الخدمات",
         'jobs' => "التوظيف",
