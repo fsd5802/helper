@@ -153,8 +153,8 @@
                         $("#Mmessage").append(`<div class="alert alert-danger my-1">${response.responseJSON.errors.message}</div>`);
                     }
 
-                    if (response.responseJSON.errors.gtoken) {
-                        $("#Mcaptcha").append(`<div class="alert alert-danger my-1">${response.responseJSON.errors.gtoken}</div>`);
+                    if (response.responseJSON.errors.g-recaptcha-response) {
+                        $("#Mcaptcha").append(`<div class="alert alert-danger my-1">${response.responseJSON.errors.g-recaptcha-response}</div>`);
                     }
 
                 }
