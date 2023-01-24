@@ -37,10 +37,7 @@
     color: #fff;
 }
 
-.saas_two_main_header .s2-main-navigation .navbar-nav .active {
+.active {
     color: #2681db;
 }
 
-.s2-mobile_menu_content .s2-mobile-main-navigation .navbar-nav .active {
-    color: #2681db;
-}
