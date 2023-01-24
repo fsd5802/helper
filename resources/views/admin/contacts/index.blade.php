@@ -31,8 +31,8 @@
                 <tr>
                     <th scope="row">{{ $key + 1 }}</th>
                     <td>{{ $value->name }}</td>
-                    <td>{{  $value->email }}</td>
-                    <td>{{ $value->phone  }}</td>
+                    <td dir="ltr">{{  $value->email }}</td>
+                    <td dir="ltr">{{ $value->phone  }}</td>
                     <td>{{ $value->subject  }}</td>
                     <td>{{ substr($value->message  , 0 , 20) }}</td>
                     <td>{{date("d/m/Y", strtotime($value->created_at)) }}</td>
