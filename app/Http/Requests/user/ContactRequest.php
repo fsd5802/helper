@@ -29,7 +29,7 @@ class ContactRequest extends FormRequest
             'phone' => "required",
             'subject' => "required",
             'message' => "required",
-            'g-recaptcha-response' => 'required|captcha',
+            'g_recaptcha_response' => 'required|captcha',
         ];
     }
 

@@ -126,7 +126,7 @@
                     'phone': $("input[name=phone]").val(),
                     'subject': $("input[name=subject]").val(),
                     'message': $("#message").val(),
-                    'g-recaptcha-response': gtoken,
+                    'g_recaptcha_response': gtoken,
                 },
                 success: (response) => {
                     if (response) {
@@ -153,8 +153,8 @@
                         $("#Mmessage").append(`<div class="alert alert-danger my-1">${response.responseJSON.errors.message}</div>`);
                     }
 
-                    if (response.responseJSON.errors.g-recaptcha-response) {
-                        $("#Mcaptcha").append(`<div class="alert alert-danger my-1">${response.responseJSON.errors.g-recaptcha-response}</div>`);
+                    if (response.responseJSON.errors.g_recaptcha_response) {
+                        $("#Mcaptcha").append(`<div class="alert alert-danger my-1">${response.responseJSON.errors.g_recaptcha_response}</div>`);
                     }
 
                 }
