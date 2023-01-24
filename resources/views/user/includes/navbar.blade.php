@@ -25,21 +25,21 @@
                     <div class="main_menu_list clearfix float-right">
                         <nav class="s2-main-navigation  clearfix ul-li">
                             <ul class="navbar-nav text-capitalize clearfix" id="main-nav">
-                                <li class=" {{Route::is('home') ? 'active' : '' }}"><a href="{{ url("/".app()->getLocale()) }}">@lang("user.navbar.home")</a></li>
-                                <li><a href="{{ getRoute("aboutus") }}">@lang("user.navbar.aboutus")</a></li>
-                                <li><a href="{{ getRoute('works') }}">@lang("user.navbar.ourwork")</a></li>
-                                <li><a href="{{ getRoute('services') }}">@lang("user.navbar.services")</a></li>
-                                <li><a href="{{ getRoute('jobs') }}">@lang("user.navbar.jobs")</a></li>
-                                <li><a href="{{ getRoute("customers") }}">@lang("user.navbar.customers")</a></li>
-                                <li><a href="{{ getRoute("blogs") }}">@lang("user.navbar.blogs")</a></li>
-                                <li><a href="{{ getRoute("plans") }}">@lang("user.navbar.ticketsupport") </a></li>
-                                <li>
+                                <li class="{{Route::is('home') ? 'active' : '' }}"><a href="{{ url("/".app()->getLocale()) }}">@lang("user.navbar.home")</a></li>
+                                <li class="{{Route::is('aboutus') ? 'active' : '' }}"><a href="{{ getRoute("aboutus") }}">@lang("user.navbar.aboutus")</a></li>
+                                <li class="{{Route::is('works') ? 'active' : '' }}"><a href="{{ getRoute('works') }}">@lang("user.navbar.ourwork")</a></li>
+                                <li class="{{Route::is('services') ? 'active' : '' }}"><a href="{{ getRoute('services') }}">@lang("user.navbar.services")</a></li>
+                                <li class="{{Route::is('jobs') ? 'active' : '' }}"><a href="{{ getRoute('jobs') }}">@lang("user.navbar.jobs")</a></li>
+                                <li class="{{Route::is('customers') ? 'active' : '' }}"><a href="{{ getRoute("customers") }}">@lang("user.navbar.customers")</a></li>
+                                <li class="{{Route::is('blogs') ? 'active' : '' }}"><a href="{{ getRoute("blogs") }}">@lang("user.navbar.blogs")</a></li>
+                                <li class="{{Route::is('plans') ? 'active' : '' }}"><a href="{{ getRoute("plans") }}">@lang("user.navbar.ticketsupport") </a></li>
+                                <li class="{{Route::is('service_request') ? 'active' : '' }}">
                                     <a href="{{ getRoute("service_request.index") }}">{{__('user.header.service_request')}} </a>
                                 </li>
-                                <li>
+                                <li class="{{Route::is('quote_request') ? 'active' : '' }}">
                                     <a href="{{ getRoute("quote_request.index") }}">{{__('user.header.quote_request')}} </a>
                                 </li>
-                                <li><a href="{{ getRoute("getContactUs") }}"> @lang("user.navbar.contactus")</a></li>
+                                <li class="{{Route::is('getContactUs') ? 'active' : '' }}"><a href="{{ getRoute("getContactUs") }}"> @lang("user.navbar.contactus")</a></li>
                                 {{-- <li class="dropdown user"><a href="#"> <i class="fa fa-user"></i></a>
                                   <ul class="dropdown-menu clearfix">
                                     <li><a href="login.html">login</a></li>
@@ -77,21 +77,21 @@
                                 src="{{ asset(setting()->logo) }}" alt="{{ setting()->name }}"></a></div>
                     <nav class="s2-mobile-main-navigation  clearfix ul-li">
                         <ul class="navbar-nav text-capitalize clearfix" id="m-main-nav">
-                            <li><a href="{{ url("/".app()->getLocale()) }}">@lang("user.navbar.home")</a></li>
-                            <li><a href="{{ getRoute("aboutus") }}">@lang("user.navbar.aboutus")</a></li>
-                            <li><a href="{{ getRoute('works') }}">@lang("user.navbar.ourwork")</a></li>
-                            <li><a href="{{ getRoute('services') }}">@lang("user.navbar.services")</a></li>
-                            <li><a href="{{ getRoute('jobs') }}">@lang("user.navbar.jobs")</a></li>
-                            <li><a href="{{ getRoute("customers") }}">@lang("user.navbar.customers")</a></li>
-                            <li><a href="{{ getRoute("blogs") }}">@lang("user.navbar.blogs")</a></li>
-                            <li><a href="{{ getRoute("plans") }}">@lang("user.navbar.ticketsupport") </a></li>
-                            <li>
+                            <li class="{{Route::is('home') ? 'active' : '' }}"><a href="{{ url("/".app()->getLocale()) }}">@lang("user.navbar.home")</a></li>
+                            <li class="{{Route::is('aboutus') ? 'active' : '' }}"><a href="{{ getRoute("aboutus") }}">@lang("user.navbar.aboutus")</a></li>
+                            <li class="{{Route::is('works') ? 'active' : '' }}"><a href="{{ getRoute('works') }}">@lang("user.navbar.ourwork")</a></li>
+                            <li class="{{Route::is('services') ? 'active' : '' }}"><a href="{{ getRoute('services') }}">@lang("user.navbar.services")</a></li>
+                            <li class="{{Route::is('jobs') ? 'active' : '' }}"><a href="{{ getRoute('jobs') }}">@lang("user.navbar.jobs")</a></li>
+                            <li class="{{Route::is('customers') ? 'active' : '' }}"><a href="{{ getRoute("customers") }}">@lang("user.navbar.customers")</a></li>
+                            <li class="{{Route::is('blogs') ? 'active' : '' }}"><a href="{{ getRoute("blogs") }}">@lang("user.navbar.blogs")</a></li>
+                            <li class="{{Route::is('plans') ? 'active' : '' }}"><a href="{{ getRoute("plans") }}">@lang("user.navbar.ticketsupport") </a></li>
+                            <li class="{{Route::is('service_request') ? 'active' : '' }}">
                                 <a href="{{ getRoute("service_request.index") }}">{{__('user.header.service_request')}} </a>
                             </li>
-                            <li>
+                            <li class="{{Route::is('quote_request') ? 'active' : '' }}">
                                 <a href="{{ getRoute("quote_request.index") }}">{{__('user.header.quote_request')}} </a>
                             </li>
-                            <li><a href="{{ getRoute("getContactUs") }}"> @lang("user.navbar.contactus")</a></li>
+                            <li class="{{Route::is('getContactUs') ? 'active' : '' }}"><a href="{{ getRoute("getContactUs") }}"> @lang("user.navbar.contactus")</a></li>
                         </ul>
                     </nav>
                 </div>
