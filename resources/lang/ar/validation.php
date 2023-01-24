@@ -128,8 +128,8 @@ return [
             'rule-name' => 'custom-message',
         ],
         'g_recaptcha_response' => [
-            'required' => 'Please verify that you are not a robot.',
-            'captcha' => 'Captcha error! try again later or contact site admin.',
+            'required' => 'يرجى التحقق من أنك لست روبوتًا.',
+            'captcha' => 'خطأ في كلمة التحقق! حاول مرة أخرى لاحقًا أو اتصل بمسؤول الموقع.',
         ],
     ],
     'attributes' => [
