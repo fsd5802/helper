@@ -89,7 +89,7 @@
         </div>
         <div class="col form-group">
             <label>@lang('admin.general.price') <span class="text-danger">*</span></label>
-            <input type="text" value="{{ old("price") }}" name="price" placeholder="@lang('admin.general.price')" class="form-control @error('price') is-invalid @enderror">
+            <input type="number" min="0"  value="{{ old("price") }}" name="price" placeholder="@lang('admin.general.price')" class="form-control @error('price') is-invalid @enderror">
             @error("price")
             <div class="alert my-2 alert-danger">{{ $message }}</div>
             @enderror
