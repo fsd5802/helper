@@ -82,8 +82,8 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6">
                                         <div class="form-group @error('g-recaptcha-response') is-invalid @enderror">
-                                            {!! NoCaptcha::renderJs() !!}
                                             {!! NoCaptcha::display() !!}
+                                            {!! NoCaptcha::renderJs() !!}
                                             @if ($errors->has('g-recaptcha-response'))
                                                 <span class="help-block">
                                                     <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
