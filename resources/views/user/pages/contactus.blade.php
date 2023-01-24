@@ -84,11 +84,13 @@
                                         <div class="form-group @error('g-recaptcha-response') is-invalid @enderror">
                                             {!! NoCaptcha::display() !!}
                                             {!! NoCaptcha::renderJs() !!}
-                                            @if ($errors->has('g-recaptcha-response'))
-                                                <span class="help-block">
-                                                    <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
-                                                </span>
-                                            @endif
+{{--                                            @if ($errors->has('g-recaptcha-response'))--}}
+{{--                                                <span class="help-block">--}}
+{{--                                                    <strong>{{ $errors->first('g-recaptcha-response') }}</strong>--}}
+{{--                                                </span>--}}
+{{--                                            @endif--}}
+
+                                            <div id="Mcaptcha" class="err"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -113,6 +115,7 @@
             let formData = new FormData(this);
             $(".err").empty();
             $(".err").addClass("d-none");
+            var gtoken = grecaptcha.getResponse();
             $.ajax({
                 type: 'POST',
                 url: "{{ getRoute('handleContactUs') }}",
@@ -123,6 +126,7 @@
                     'phone': $("input[name=phone]").val(),
                     'subject': $("input[name=subject]").val(),
                     'message': $("#message").val(),
+                    'g-recaptcha-response': gtoken,
                 },
                 success: (response) => {
                     if (response) {
@@ -148,6 +152,11 @@
                     if (response.responseJSON.errors.message) {
                         $("#Mmessage").append(`<div class="alert alert-danger my-1">${response.responseJSON.errors.message}</div>`);
                     }
+
+                    if (response.responseJSON.errors.gtoken) {
+                        $("#Mcaptcha").append(`<div class="alert alert-danger my-1">${response.responseJSON.errors.gtoken}</div>`);
+                    }
+
                 }
             });
         });
