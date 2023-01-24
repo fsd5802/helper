@@ -25,7 +25,7 @@
                     <div class="main_menu_list clearfix float-right">
                         <nav class="s2-main-navigation  clearfix ul-li">
                             <ul class="navbar-nav text-capitalize clearfix" id="main-nav">
-                                <li><a href="{{ url("/".app()->getLocale()) }}">@lang("user.navbar.home")</a></li>
+                                <li class=" {{Route::is('home') ? 'active' : '' }}"><a href="{{ url("/".app()->getLocale()) }}">@lang("user.navbar.home")</a></li>
                                 <li><a href="{{ getRoute("aboutus") }}">@lang("user.navbar.aboutus")</a></li>
                                 <li><a href="{{ getRoute('works') }}">@lang("user.navbar.ourwork")</a></li>
                                 <li><a href="{{ getRoute('services') }}">@lang("user.navbar.services")</a></li>

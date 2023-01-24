@@ -35,3 +35,7 @@
     font-size: 45px;
     color: #fff;
 }
+
+.saas_two_main_header .s2-main-navigation .navbar-nav .active {
+    color: #2681db;
+}

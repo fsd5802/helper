@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => '{locale}', 'middleware' => 'SwitchLanguage'], function () {
 
-    Route::get('/', [App\Http\Controllers\user\HomeController::class, 'index']);
+    Route::get('/', [App\Http\Controllers\user\HomeController::class, 'index'])->name('home');
 
     Route::get('/aboutus', [App\Http\Controllers\user\HomeController::class, 'aboutus'])->name("aboutus");
     Route::get('/customers', [App\Http\Controllers\user\HomeController::class, 'customers'])->name("customers");
